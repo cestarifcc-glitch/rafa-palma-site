@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#151515" />
+  <meta name="description" content="Solicite um orçamento Rafa Palma para seu evento, empresa ou experiência com café." />
+  <title>Orçamento — Rafa Palma</title>
+  <link rel="icon" href="favicon.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .budget-page{min-height:100vh;background:var(--paper);color:var(--ink);padding:130px 0 80px}
+    .budget-shell{display:grid;grid-template-columns:.8fr 1.2fr;gap:55px;align-items:start}
+    .budget-intro{position:sticky;top:115px}
+    .budget-intro h1{font-size:clamp(46px,5vw,72px);line-height:.95;margin:14px 0 24px}
+    .budget-intro .script{font-size:28px}
+    .budget-intro p:not(.eyebrow):not(.script){font-size:17px;max-width:500px}
+    .budget-form{background:#fff;border:1px solid #e0d4c7;border-radius:18px;padding:34px;box-shadow:0 18px 50px rgba(52,35,24,.08)}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .form-field{display:flex;flex-direction:column;gap:7px}
+    .form-field.full{grid-column:1/-1}
+    .form-field label{font-weight:700;font-size:14px}
+    .form-field input,.form-field select,.form-field textarea{
+      width:100%;border:1px solid #d8c8ba;background:#fbf7f2;color:#17110b;
+      padding:13px 14px;border-radius:8px;font:inherit
+    }
+    .form-field textarea{min-height:130px;resize:vertical}
+    .form-note{margin:24px 0 0;padding:15px 17px;background:#f3e7da;border-left:3px solid var(--brown);font-size:13px;color:#624f41}
+    .budget-submit{margin-top:24px;width:100%;border:0;opacity:.58;cursor:not-allowed}
+    .back-link{display:inline-block;margin-top:25px;color:var(--brown);font-weight:700}
+    @media(max-width:800px){
+      .budget-page{padding-top:100px}
+      .budget-shell{grid-template-columns:1fr;gap:30px}
+      .budget-intro{position:static}
+      .form-grid{grid-template-columns:1fr}
+      .form-field.full{grid-column:auto}
+      .budget-form{padding:24px}
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Rafa Palma - início">
+      <img src="assets/images/logo-rafa-oficial.png" alt="Rafa Palma — Especialista em Café" />
+    </a>
+    <a class="nav-cta" href="index.html">Voltar ao site</a>
+  </header>
+
+  <main class="budget-page">
+    <div class="container budget-shell">
+      <section class="budget-intro">
+        <p class="eyebrow dark">Orçamento Rafa Palma</p>
+        <h1>Conte-nos sobre a sua experiência.</h1>
+        <p class="script">Quanto mais detalhes, mais ágil e precisa será a proposta.</p>
+        <p>Este é o primeiro desenho do questionário. Ele reúne as informações essenciais e poderá ser refinado antes da publicação definitiva.</p>
+        <a class="back-link" href="index.html">← Voltar para o site</a>
+      </section>
+
+      <form class="budget-form" onsubmit="return false;">
+        <div class="form-grid">
+          <div class="form-field"><label for="nome">Nome do responsável</label><input id="nome" name="nome" type="text"></div>
+          <div class="form-field"><label for="empresa">Empresa / organização</label><input id="empresa" name="empresa" type="text"></div>
+          <div class="form-field"><label for="telefone">Telefone / WhatsApp</label><input id="telefone" name="telefone" type="tel"></div>
+          <div class="form-field"><label for="email">E-mail</label><input id="email" name="email" type="email"></div>
+          <div class="form-field"><label for="tipo">Tipo de experiência</label>
+            <select id="tipo" name="tipo">
+              <option value="">Selecione</option>
+              <option>Evento / feira / exposição</option>
+              <option>Evento corporativo</option>
+              <option>Workshop / experiência de café</option>
+              <option>Café para empresa</option>
+              <option>Máquinas — venda ou locação</option>
+              <option>Outro</option>
+            </select>
+          </div>
+          <div class="form-field"><label for="cidade">Cidade / UF</label><input id="cidade" name="cidade" type="text"></div>
+          <div class="form-field"><label for="data">Data do evento</label><input id="data" name="data" type="date"></div>
+          <div class="form-field"><label for="publico">Número estimado de pessoas</label><input id="publico" name="publico" type="number" min="1"></div>
+          <div class="form-field"><label for="inicio">Horário de início</label><input id="inicio" name="inicio" type="time"></div>
+          <div class="form-field"><label for="fim">Horário de término</label><input id="fim" name="fim" type="time"></div>
+          <div class="form-field full"><label for="estrutura">Que estrutura ou experiência você imagina?</label><textarea id="estrutura" name="estrutura" placeholder="Café, máquinas, métodos, equipe, serviço, espaço disponível e outras necessidades."></textarea></div>
+          <div class="form-field full"><label for="objetivo">Qual é o objetivo ou momento mais importante desse evento?</label><textarea id="objetivo" name="objetivo" placeholder="Ex.: receber clientes, lançamento, confraternização, feira, experiência de marca, camarote, workshop..."></textarea></div>
+          <div class="form-field full"><label for="observacoes">Outras informações</label><textarea id="observacoes" name="observacoes"></textarea></div>
+        </div>
+        <div class="form-note"><strong>Configuração pendente:</strong> o questionário está desenhado, mas o envio ainda precisa ser conectado ao destino definitivo antes da publicação.</div>
+        <button class="btn btn-primary budget-submit" type="submit" disabled>Enviar solicitação</button>
+      </form>
+    </div>
+  </main>
+</body>
+</html>
