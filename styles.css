@@ -1,0 +1,347 @@
+:root{--cream:#E8DBCB;--brown:#964430;--ink:#151515;--gold:#c99337;--paper:#f6efe7;--white:#fff;--max:1180px;--radius:18px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ink);color:var(--paper);font-family:Bahnschrift,"Arial Narrow",Arial,sans-serif;line-height:1.5}img,video{display:block;width:100%}a{color:inherit;text-decoration:none}.container{width:min(var(--max),calc(100% - 40px));margin:auto}.site-header{height:76px;position:fixed;z-index:50;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:0 max(22px,calc((100vw - var(--max))/2));background:linear-gradient(180deg,rgba(15,10,7,.92),rgba(15,10,7,.55));backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.08)}.brand{display:flex;gap:10px;align-items:center}.brand img{width:112px;height:60px;object-fit:contain;object-position:left center}.brand span,.footer-brand div{display:flex;flex-direction:column}.brand strong{letter-spacing:.08em;font-size:15px}.brand small{font-size:9px;letter-spacing:.11em}.main-nav{display:flex;align-items:center;gap:26px;font-size:13px}.main-nav a:hover{color:var(--gold)}.nav-cta{padding:10px 16px;border:1px solid var(--gold);border-radius:5px}.menu-toggle{display:none;background:none;border:0;color:white;font-size:28px}.hero{min-height:760px;height:100vh;position:relative;display:flex;align-items:flex-end;overflow:hidden}.hero-video,.hero-shade{position:absolute;inset:0;height:100%;object-fit:cover}.hero-video{object-position:center 42%}.hero-shade{background:linear-gradient(90deg,rgba(12,8,5,.94) 0%,rgba(12,8,5,.72) 38%,rgba(12,8,5,.25) 70%,rgba(12,8,5,.2)),linear-gradient(0deg,rgba(12,8,5,.75),transparent 50%)}.hero-content{position:relative;z-index:2;padding-bottom:11vh;max-width:1180px}.eyebrow{text-transform:uppercase;letter-spacing:.17em;font-size:12px;color:#e9ba68;font-weight:700}.eyebrow.dark{color:var(--brown)}h1,h2,h3,p{margin-top:0}h1{font-size:clamp(52px,7vw,96px);line-height:.9;letter-spacing:-.035em;margin:12px 0 22px;max-width:780px}h1 span{color:var(--cream)}h2{font-size:clamp(34px,4vw,58px);line-height:1.03;letter-spacing:-.025em;margin-bottom:18px}h2 em{font-family:Georgia,serif;font-weight:400;color:var(--brown)}.hero-copy{font-size:clamp(18px,2vw,24px);max-width:650px;color:#eee}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;text-transform:uppercase;letter-spacing:.04em;font-weight:800;font-size:12px;padding:15px 20px;border-radius:5px;transition:.2s}.btn-primary{background:var(--gold);color:#17110b}.btn-primary:hover{transform:translateY(-2px);filter:brightness(1.07)}.btn-ghost{border:1px solid rgba(255,255,255,.65)}.split{display:grid;grid-template-columns:1fr 1fr;min-height:590px}.split.reverse .media{order:2}.media{overflow:hidden}.media img{height:100%;object-fit:cover}.copy{padding:80px max(40px,calc((100vw - var(--max))/2));display:flex;flex-direction:column;justify-content:center}.panel-light{background:var(--paper);color:var(--ink)}.copy>p:not(.eyebrow):not(.section-number):not(.script){font-size:18px;max-width:650px}.section-number{font-size:13px;color:#8f806f}.script{font:italic 30px Georgia,serif;color:var(--brown)}.feature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:32px}.feature-grid span{text-align:center;font-weight:700}.feature-grid b{display:block;color:var(--brown);font-size:28px}.feature-grid small{display:block;font-weight:400;color:#6e6258}.feature-grid.compact b{color:var(--gold)}.section-dark{background:#17120e;color:var(--paper);padding:90px 0}.section-head{display:flex;justify-content:space-between;gap:40px;align-items:end;margin-bottom:35px}.section-head h2{margin-bottom:0}.section-head>p{max-width:470px;color:#cbbfb2}.event-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.event-card{background:#241a14;border:1px solid rgba(232,219,203,.14);border-radius:var(--radius);overflow:hidden}.event-card.featured{grid-column:span 2}.event-card img{height:220px;object-fit:cover}.event-card.featured img{height:300px}.event-card div{padding:18px}.event-card span{font-size:11px;color:#d4a352;text-transform:uppercase}.event-card h3{margin:5px 0 8px;font-size:20px}.event-card p{color:#bfb3a8;font-size:14px;margin-bottom:0}.routes{display:flex;flex-wrap:wrap;gap:9px;color:var(--brown);font-size:13px;margin-top:22px}.routes span{background:#eadfD3;padding:8px 11px;border-radius:999px}.roasting-grid{display:grid;grid-template-columns:1.1fr .9fr .9fr;align-items:stretch}.roast-copy{padding:45px 50px 45px 0}.roasting img,.roasting video{height:100%;min-height:440px;object-fit:cover}.portrait img{object-position:center 25%}.about blockquote{margin:26px 0 0;border-left:3px solid var(--brown);padding:14px 0 14px 20px;font:italic 19px Georgia,serif;color:#5b4a3d}.section-cream{background:var(--cream);color:var(--ink);padding:90px 0}.workshops-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:45px;align-items:center}.workshops-grid video{border-radius:var(--radius);max-height:560px;object-fit:cover}.company-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:30px}.company-grid article{background:#211813;padding:12px;border-radius:var(--radius)}.company-grid img{height:230px;object-fit:cover;border-radius:12px}.company-grid h3{margin:14px 4px 2px}.company-grid p{margin:0 4px 8px;color:#bcae9e}.affection .media img{object-position:center}.final-cta{min-height:520px;position:relative;display:flex;align-items:center;text-align:left;overflow:hidden}.final-bg{position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,8,5,.95),rgba(12,8,5,.55)),url('assets/images/rafa-dmaria.jpg') center/cover}.final-content{position:relative;z-index:2}.final-content h2{font-size:clamp(48px,7vw,88px);max-width:760px;margin-bottom:12px}.final-content p{font-size:20px;max-width:600px}.btn-large{font-size:14px;padding:18px 28px;margin-top:12px}footer{background:#0e0c0a;padding:35px 0;border-top:1px solid rgba(255,255,255,.08)}.footer-grid{display:grid;grid-template-columns:1.4fr repeat(4,1fr);gap:28px;align-items:center;font-size:13px}.footer-grid>div:not(.footer-brand){display:flex;flex-direction:column;gap:3px}.footer-grid small{color:#9f9286}.footer-brand{display:flex;align-items:center;gap:10px}.footer-brand img{width:46px;height:52px;object-fit:contain}.footer-brand small{font-size:9px;letter-spacing:.1em}
+@media(max-width:900px){.site-header{height:68px}.main-nav{display:none;position:absolute;top:68px;left:0;right:0;background:#15110e;padding:24px;flex-direction:column;align-items:stretch}.main-nav.open{display:flex}.menu-toggle{display:block}.brand strong{font-size:13px}.hero{min-height:720px}.hero-video{object-position:center}.hero-shade{background:linear-gradient(0deg,rgba(12,8,5,.96) 0%,rgba(12,8,5,.76) 48%,rgba(12,8,5,.2) 100%)}.hero-content{padding-bottom:70px}.split,.split.reverse{grid-template-columns:1fr}.split.reverse .media{order:0}.split .media{min-height:390px}.copy{padding:54px 24px}.feature-grid{grid-template-columns:repeat(2,1fr)}.section-dark,.section-cream{padding:65px 0}.section-head{display:block}.event-grid{grid-template-columns:1fr 1fr}.event-card.featured{grid-column:span 2}.roasting-grid{grid-template-columns:1fr}.roast-copy{padding:10px 0 35px}.roasting img,.roasting video{min-height:320px;max-height:430px}.workshops-grid{grid-template-columns:1fr}.company-grid{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}.footer-brand{grid-column:1/-1}}
+@media(max-width:560px){.container{width:min(100% - 28px,var(--max))}.brand img{width:38px;height:42px}.brand small{font-size:7px}.hero{height:86svh;min-height:660px}.hero-content{padding-bottom:42px}.hero h1{font-size:50px}.hero-copy{font-size:17px}.actions{display:grid}.btn{width:100%}.split .media{min-height:300px}.copy{padding:46px 22px}.copy>p:not(.eyebrow):not(.section-number):not(.script){font-size:16px}.feature-grid{gap:14px}.section-head h2{font-size:38px}.event-grid{grid-template-columns:1fr}.event-card.featured{grid-column:auto}.event-card img,.event-card.featured img{height:220px}.brazil .media{min-height:330px}.routes{gap:6px}.company-grid{grid-template-columns:1fr}.company-grid img{height:210px}.affection .media{min-height:340px}.final-cta{min-height:590px}.final-bg{background-position:58% center}.final-content h2{font-size:52px}.footer-grid{grid-template-columns:1fr;gap:18px}.footer-brand{grid-column:auto}}
+
+/* V2 refinements */
+.reach{display:flex;flex-direction:column;gap:5px;margin-top:24px;padding-left:15px;border-left:2px solid var(--brown);color:var(--brown)}
+.reach strong{font-size:16px}.reach span{font-size:13px;color:#765f50}
+.video-frame,.workshop-media{position:relative;display:flex;flex-direction:column;gap:9px}.video-frame video{min-height:0!important}.video-frame small,.workshop-media small{font-size:11px;letter-spacing:.05em;color:#aa9d91}.workshop-media small{color:#765f50}
+.workshop-tags{margin-top:22px;color:var(--brown);font-weight:700;font-size:13px;line-height:1.7}
+.company-image{height:230px;overflow:hidden;border-radius:12px;background:#120f0d}.company-image img{height:100%;width:100%;object-fit:cover}.machine-card .company-image img{object-position:center 48%}.company-benefits{display:flex;gap:10px;flex-wrap:wrap;margin:-4px 0 28px}.company-benefits span{border:1px solid rgba(232,219,203,.18);border-radius:999px;padding:8px 12px;color:#d4c7ba;font-size:12px}
+/* tighter rhythm between sections */
+.events.section-dark,.roasting.section-dark,.companies.section-dark{padding-top:76px;padding-bottom:76px}.section-cream{padding-top:76px;padding-bottom:76px}
+.about.split,.affection.split,.brazil.split,.experience.split{min-height:560px}
+.about .copy{padding-top:64px;padding-bottom:64px}.affection .copy{padding-top:64px;padding-bottom:64px}
+@media(max-width:900px){.events.section-dark,.roasting.section-dark,.companies.section-dark,.section-cream{padding-top:56px;padding-bottom:56px}.video-frame small,.workshop-media small{padding-left:2px}.company-image{height:220px}}
+@media(max-width:560px){.site-header{background:rgba(15,10,7,.96)}.brand span{max-width:145px}.hero{height:82svh;min-height:620px}.hero h1{font-size:46px;line-height:.94}.hero-content{padding-bottom:36px}.copy{padding-top:40px;padding-bottom:40px}.split .media{min-height:280px}.about .media{min-height:390px}.about .media img{object-position:center 20%}.affection .media{min-height:360px}.affection .media img{object-position:52% center}.feature-grid{margin-top:24px}.roasting-grid{gap:16px}.roasting img{min-height:280px}.video-frame video{max-height:520px}.workshops-grid{gap:28px}.workshop-media video{max-height:520px;object-fit:cover}.company-benefits{margin-top:2px}.final-content h2{font-size:48px}.final-cta{min-height:540px}}
+
+/* V3 content + mobile polish */
+.roast-lead{font-size:21px;line-height:1.25;margin:0 0 14px;color:#f0dfc8}.roast-signoff{font-weight:700;color:#e9ba68;margin-top:18px}.national-service{font-size:14px!important;text-transform:uppercase;letter-spacing:.12em;color:#e9ba68;font-weight:800}.whatsapp-float{position:fixed;right:20px;bottom:20px;z-index:50;background:#d4a352;color:#17110b;font-weight:900;font-size:12px;letter-spacing:.04em;text-transform:uppercase;padding:13px 17px;border-radius:999px;box-shadow:0 10px 30px rgba(0,0,0,.28)}.whatsapp-float:hover{transform:translateY(-2px)}
+@media(max-width:560px){.main-nav.open{max-height:calc(100svh - 68px);overflow:auto}.hero-video{object-position:58% center}.hero-shade{background:linear-gradient(0deg,rgba(12,8,5,.98) 0%,rgba(12,8,5,.82) 45%,rgba(12,8,5,.28) 100%)}.hero h1{font-size:44px}.hero .eyebrow{font-size:10px}.hero-copy{max-width:92%}.section-head>p{font-size:15px}.roast-lead{font-size:19px}.roasting-grid .feature-grid{grid-template-columns:repeat(2,1fr)}.company-grid article{padding:10px}.company-grid p{font-size:14px;line-height:1.45}.whatsapp-float{right:14px;bottom:14px;padding:12px 15px}.final-content{padding-bottom:45px}}
+.video-preview{position:relative;overflow:hidden}.video-preview>img{width:100%;height:100%;min-height:440px;object-fit:cover}.video-preview .play-video{position:absolute;left:24px;bottom:38px;border:1px solid rgba(255,255,255,.65);background:rgba(15,10,7,.78);color:#fff;padding:13px 17px;border-radius:999px;text-transform:uppercase;font-weight:800;font-size:11px;letter-spacing:.05em;cursor:pointer;backdrop-filter:blur(6px)}.video-preview .play-video span{color:#e9ba68;margin-right:7px}.video-preview small{position:absolute;left:24px;bottom:13px;color:#eee!important}.video-modal{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;padding:40px}.video-modal.open{display:flex}.video-modal video{max-width:1000px;max-height:85vh;width:100%;background:#000}.video-close{position:absolute;right:24px;top:18px;background:none;border:0;color:#fff;font-size:42px;cursor:pointer}.coffee-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}.coffee-photo img{width:100%;height:570px;object-fit:cover;border-radius:var(--radius)}.coffee-copy>p:not(.eyebrow):not(.script){font-size:18px;line-height:1.6}.coffee-benefits{display:flex;flex-wrap:wrap;gap:9px;margin:26px 0}.coffee-benefits span{border:1px solid rgba(85,59,40,.25);padding:9px 12px;border-radius:999px;font-size:12px;font-weight:700;color:var(--brown)}
+@media(max-width:900px){.coffee-grid{grid-template-columns:1fr;gap:32px}.coffee-photo img{height:480px}.video-preview>img{min-height:360px}.video-modal{padding:18px}}
+@media(max-width:560px){.coffee-photo img{height:390px}.video-preview>img{min-height:340px}.video-preview .play-video{left:16px;bottom:36px}.video-preview small{left:16px}.reach span{line-height:1.5}}
+
+/* V5 refinements — empresas, portfólio e acabamento */
+.event-grid .event-card:nth-child(4),.event-grid .event-card:nth-child(5){grid-column:span 2}
+.event-grid .event-card:nth-child(4) img,.event-grid .event-card:nth-child(5) img{height:260px}
+.company-intro{max-width:470px}.company-intro p{margin:0 0 10px}.company-intro p:last-child{font-size:13px;color:#d6aa63;font-weight:800;letter-spacing:.02em}
+.company-grid-v5{grid-template-columns:repeat(4,1fr)}.company-grid-v5 .company-image{height:245px}.company-grid-v5 article{display:flex;flex-direction:column}.company-grid-v5 article p{flex:1}
+.company-video .play-video{left:12px;right:12px;bottom:12px;width:calc(100% - 24px);padding:11px 12px;white-space:normal;line-height:1.25}.company-video>img{min-height:0!important;height:100%!important}
+.reach strong:last-child{font-weight:800}.reach span strong{color:var(--brown)}
+footer{padding:44px 0}.footer-grid{font-size:14px}.footer-grid small{font-size:11px}
+.whatsapp-float{padding:11px 15px;opacity:.92}
+@media(max-width:1050px){.company-grid-v5{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:900px){.event-grid .event-card:nth-child(4),.event-grid .event-card:nth-child(5){grid-column:auto}.event-grid .event-card:nth-child(4) img,.event-grid .event-card:nth-child(5) img{height:220px}.company-intro{max-width:none;margin-top:16px}}
+@media(max-width:560px){.company-grid-v5{grid-template-columns:1fr}.company-grid-v5 .company-image{height:250px}.company-video .play-video{font-size:10px}.whatsapp-float{font-size:0;width:48px;height:48px;padding:0;border-radius:50%;display:flex;align-items:center;justify-content:center}.whatsapp-float::before{content:'WA';font-size:11px;font-weight:900}.footer-grid{font-size:14px}}
+
+/* Ajustes finais mobile */
+@media(max-width:560px){.whatsapp-float{right:10px;bottom:10px;width:42px;height:42px}.footer-grid{gap:12px}.footer-grid>div:not(.footer-brand){gap:1px}}
+
+
+/* V6 — portfólio com 6 cards + enquadramento SDX */
+@media(min-width:901px){
+  .event-grid{grid-template-columns:repeat(12,1fr)}
+  .event-grid .event-card{grid-column:span 3}
+  .event-grid .event-card.featured{grid-column:span 6}
+  .event-grid .event-card:nth-child(4),
+  .event-grid .event-card:nth-child(5),
+  .event-grid .event-card:nth-child(6){grid-column:span 4}
+  .event-grid .event-card:nth-child(4) img,
+  .event-grid .event-card:nth-child(5) img,
+  .event-grid .event-card:nth-child(6) img{height:260px}
+  .event-grid .event-card:nth-child(5) img{object-position:center top}
+}
+@media(max-width:900px){
+  .event-grid .event-card:nth-child(6){grid-column:auto}
+  .event-grid .event-card:nth-child(6) img{height:220px}
+  .event-grid .event-card:nth-child(5) img{object-position:center top}
+}
+
+
+/* V7 — ajustes aprovados */
+
+/* Marca oficial no cabeçalho e rodapé */
+.brand img{
+  width:168px;
+  height:58px;
+  object-fit:contain;
+  object-position:left center;
+}
+.footer-brand img{
+  width:170px;
+  height:78px;
+  object-fit:contain;
+  object-position:left center;
+}
+
+/* "Não servimos apenas café." em uma linha no desktop */
+.experience-title-line{
+  white-space:nowrap;
+}
+.experience .copy h2{
+  font-size:clamp(36px,3.35vw,48px);
+}
+
+/* Portfólio: card grande no início e card grande de Pelotas no fim da segunda linha */
+@media(min-width:901px){
+  .event-grid{
+    grid-template-columns:repeat(12,1fr);
+  }
+  .event-grid .event-card{
+    grid-column:span 3;
+  }
+  .event-grid .event-card.featured{
+    grid-column:span 6;
+  }
+  .event-grid .event-card:nth-child(4),
+  .event-grid .event-card:nth-child(5){
+    grid-column:span 3;
+  }
+  .event-grid .event-card.featured-pelotas{
+    grid-column:span 6;
+  }
+  .event-grid .event-card.featured-pelotas img{
+    height:300px;
+  }
+  .event-grid .event-card:nth-child(5) img{
+    object-position:center top;
+  }
+}
+
+/* Destaque comercial da área Empresas */
+.company-intro{
+  background:#241a14;
+  border:1px solid rgba(232,219,203,.14);
+  border-left:3px solid var(--gold);
+  border-radius:14px;
+  padding:22px 24px;
+  box-shadow:0 14px 34px rgba(0,0,0,.14);
+}
+.company-intro p:first-child{
+  color:#e7dbcf;
+  line-height:1.55;
+}
+.company-intro p:first-child strong{
+  color:#fff;
+}
+.company-intro p:last-child{
+  margin-bottom:0;
+}
+
+/* Mobile */
+@media(max-width:560px){
+  .brand img{
+    width:145px;
+    height:48px;
+  }
+  .experience-title-line{
+    white-space:normal;
+  }
+  .experience .copy h2{
+    font-size:34px;
+  }
+  .footer-brand img{
+    width:155px;
+    height:72px;
+  }
+  .company-intro{
+    padding:18px;
+  }
+}
+
+/* V10 — workshop mais compacto no desktop */
+@media(min-width:901px){
+  .workshops.section-cream{padding-top:52px;padding-bottom:52px;}
+  .workshops-grid{grid-template-columns:.8fr 1.2fr;gap:45px;align-items:center;}
+  .workshop-media{height:540px;min-height:0;}
+  .video-preview.workshop-media>img{height:540px;min-height:0;object-fit:cover;object-position:center 45%;}
+}
+
+/* V11 — ajuste fino do vídeo principal */
+@media (min-width:901px){
+  .hero-video{
+    object-position:43% 42%;
+    transform:scale(1.035);
+  }
+  .hero-shade{
+    background:
+      linear-gradient(90deg,rgba(12,8,5,.90) 0%,rgba(12,8,5,.66) 38%,rgba(12,8,5,.18) 70%,rgba(12,8,5,.12)),
+      linear-gradient(0deg,rgba(12,8,5,.62),transparent 52%);
+  }
+}
+
+
+/* V12: compact experience section */
+@media (min-width:901px){
+  .experience.split{min-height:510px}
+  .experience .copy{padding-top:54px;padding-bottom:54px}
+  .experience .feature-grid{margin-top:24px}
+}
+
+
+/* V13 — finalização desktop aprovada */
+
+/* Cabeçalho: mesma presença visual da marca usada no rodapé */
+.site-header .brand img{
+  opacity:1 !important;
+  filter:none !important;
+}
+
+/* Eventos: refinamento de hierarquia e alinhamento */
+@media (min-width:901px){
+  .events .section-head{
+    align-items:center;
+    margin-bottom:30px;
+  }
+  .events .section-head > p{
+    transform:translateX(-10px);
+  }
+  .event-card h3{
+    font-size:21px;
+    line-height:1.12;
+  }
+  .event-card small,
+  .event-card .eyebrow{
+    letter-spacing:.02em;
+  }
+}
+
+/* Rafa Palma pelo Brasil: seção um pouco mais compacta */
+@media (min-width:901px){
+  .brazil.split{
+    min-height:500px;
+  }
+  .brazil .copy{
+    padding-top:52px;
+    padding-bottom:52px;
+  }
+}
+
+/* Torrefação própria: compactação leve e maior presença dos quatro pilares */
+@media (min-width:901px){
+  .roasting.section-dark{
+    padding-top:64px;
+    padding-bottom:64px;
+  }
+  .roasting .feature-grid{
+    margin-top:26px;
+  }
+  .roasting .feature-grid span{
+    font-size:16px;
+  }
+  .roasting .feature-grid b{
+    font-size:30px;
+  }
+}
+
+/* Quem é Rafa Palma: compactação leve */
+@media (min-width:901px){
+  .about.split{
+    min-height:510px;
+  }
+  .about .copy{
+    padding-top:54px;
+    padding-bottom:54px;
+  }
+}
+
+/* Workshop/conhecimento: elimina o vazio inferior preservando composição */
+@media (min-width:901px){
+  .workshop.section-cream{
+    padding-top:54px;
+    padding-bottom:54px;
+  }
+}
+
+/* Empresas: faixa horizontal de destaque abaixo do título */
+.company-intro-band{
+  grid-column:1 / -1;
+  width:100%;
+  margin:20px 0 34px;
+  background:#241a14;
+  border:1px solid rgba(232,219,203,.14);
+  border-left:4px solid var(--gold);
+  border-radius:14px;
+  padding:22px 26px;
+  box-shadow:0 14px 34px rgba(0,0,0,.14);
+}
+.company-intro-band p:first-child{
+  margin:0;
+  color:#e7dbcf;
+  font-size:18px;
+  line-height:1.55;
+}
+.company-intro-band p:first-child strong{
+  display:block;
+  color:#fff;
+  font-size:24px;
+  line-height:1.15;
+  margin-bottom:8px;
+}
+.company-intro-band p:last-child{
+  margin:12px 0 0;
+  color:var(--gold);
+  font-weight:700;
+}
+
+/* CTA final */
+.final-cta h2{
+  max-width:760px;
+}
+
+/* Rodapé: contatos mais legíveis e acabamento final */
+footer{
+  padding-bottom:22px;
+}
+footer .footer-grid,
+footer .footer-content{
+  row-gap:22px;
+}
+footer b,
+footer strong{
+  font-size:15px;
+}
+footer small,
+footer p,
+footer a{
+  line-height:1.45;
+}
+.footer-bottom{
+  width:min(var(--max),calc(100% - 48px));
+  margin:18px auto 0;
+  padding-top:14px;
+  border-top:1px solid rgba(255,255,255,.08);
+  color:#8f806f;
+  font-size:12px;
+  text-align:center;
+}
+
+/* Mobile preservado; apenas garante a faixa de empresas responsiva */
+@media (max-width:900px){
+  .company-intro-band{
+    margin:16px 0 24px;
+    padding:18px;
+  }
+  .company-intro-band p:first-child strong{
+    font-size:21px;
+  }
+  .footer-bottom{
+    width:calc(100% - 32px);
+  }
+}
+
+
+/* V14 — ajustes finais aprovados na revisão mobile */
+@media(max-width:560px){
+  /* Mantém a frase principal da experiência em uma única linha */
+  .experience-title-line{white-space:nowrap;}
+  .experience .copy h2{font-size:30px;}
+
+  /* Cards de empresas mais próximos, sem reduzir as fotografias */
+  .company-grid-v5{gap:14px;}
+
+  /* Espaço de segurança para o botão flutuante não cobrir o copyright */
+  footer{padding-bottom:62px;}
+  .footer-bottom{margin-top:18px;padding-right:52px;padding-left:0;text-align:left;}
+}
