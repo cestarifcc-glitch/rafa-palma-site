@@ -456,6 +456,69 @@ footer a[href*="instagram.com"]{
 }
 </style>
 
+
+<style id="v31-index-final">
+:root{
+  --rp-brown:#8b3f2d;
+  --rp-cream:#f1e6d8;
+}
+
+/* Xícara Momentos */
+.rp-final-cup{
+  width:30px!important;
+  height:20px!important;
+  display:block!important;
+  position:relative!important;
+  margin:0 auto 12px!important;
+  border:2.5px solid var(--rp-brown)!important;
+  border-radius:3px 3px 9px 9px!important;
+  background:transparent!important;
+  box-sizing:border-box!important;
+}
+.rp-final-cup::after{
+  content:""!important;
+  position:absolute!important;
+  right:-10px!important;
+  top:3px!important;
+  width:9px!important;
+  height:10px!important;
+  border:2.5px solid var(--rp-brown)!important;
+  border-left:0!important;
+  border-radius:0 7px 7px 0!important;
+  box-sizing:border-box!important;
+}
+.experience .feature-grid span:nth-child(4){
+  text-align:center!important;
+}
+.experience .feature-grid span:nth-child(4) b,
+.experience .feature-grid span:nth-child(4) svg,
+.experience .feature-grid span:nth-child(4) i{
+  display:none!important;
+}
+
+/* Barra da citação Quem é */
+.about blockquote,
+.about .quote,
+.about .about-quote{
+  border-left-color:var(--rp-brown)!important;
+}
+.about blockquote::before,
+.about .quote::before,
+.about .about-quote::before{
+  background:var(--rp-brown)!important;
+}
+
+/* Rodapé sem amarelo */
+footer a,
+footer a:link,
+footer a:visited,
+footer a:hover,
+footer a:active{
+  color:var(--rp-cream)!important;
+  -webkit-text-fill-color:var(--rp-cream)!important;
+}
+</style>
+
 </head>
 <body>
   <header class="site-header" id="inicio">
@@ -493,7 +556,7 @@ footer a[href*="instagram.com"]{
         <h2><span class="experience-title-line">Não servimos apenas café.</span><br><em>Criamos experiências.</em></h2>
         <p>Do primeiro aroma à última xícara, cada detalhe é pensado para acolher, aproximar pessoas e tornar o evento inesquecível.</p>
         <div class="feature-grid">
-          <span><b>◔</b> Aroma<small>que acolhe</small></span><span><b>♡</b> Preparo<small>que encanta</small></span><span><b>◎</b> Conexão<small>que aproxima</small></span><span><b class="rp-cup-icon" aria-hidden="true"></b> Momentos<small>que ficam</small></span>
+          <span><b>◔</b> Aroma<small>que acolhe</small></span><span><b>♡</b> Preparo<small>que encanta</small></span><span><b>◎</b> Conexão<small>que aproxima</small></span><span><span class="rp-final-cup" aria-hidden="true"></span> Momentos<small>que ficam</small></span>
         </div>
       </div>
     </section>
