@@ -12,50 +12,100 @@
   <link rel="stylesheet" href="styles.css" />
 
 
-<style id="v20-mobile-corrections">
+
+<style id="v21-mobile-real-fixes">
 @media (max-width: 768px) {
-  /* Momentos — the coffee emoji has a larger native glyph, so normalize it */
+
+  /* MOMENTOS: remove emoji nativo do Samsung e desenha uma xícara controlável em CSS */
   .pillars span:nth-child(4) b {
     font-size: 0 !important;
     width: 28px !important;
     height: 28px !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
+    display: inline-block !important;
+    position: relative !important;
+    background: none !important;
+    background-image: none !important;
+    -webkit-background-clip: border-box !important;
+    background-clip: border-box !important;
+    -webkit-text-fill-color: initial !important;
   }
   .pillars span:nth-child(4) b::before {
-    content: "☕";
-    font-size: 22px !important;
-    line-height: 1 !important;
+    content: "" !important;
+    position: absolute !important;
+    width: 18px !important;
+    height: 11px !important;
+    left: 3px !important;
+    top: 7px !important;
+    border: 2px solid #873b28 !important;
+    border-top: 0 !important;
+    border-radius: 2px 2px 8px 8px !important;
+    box-sizing: border-box !important;
+  }
+  .pillars span:nth-child(4) b::after {
+    content: "" !important;
+    position: absolute !important;
+    width: 7px !important;
+    height: 7px !important;
+    right: 0 !important;
+    top: 9px !important;
+    border: 2px solid #873b28 !important;
+    border-left: 0 !important;
+    border-radius: 0 6px 6px 0 !important;
+    box-sizing: border-box !important;
   }
 
-  /* Rafa Palma pelo Brasil */
+  /* Rafa Palma pelo Brasil — retirar background-clip/text-image */
   .reach span,
   .reach span strong {
-    color: #71351f !important;
-    -webkit-text-fill-color: #71351f !important;
+    color: #5f4638 !important;
+    -webkit-text-fill-color: #5f4638 !important;
+    background: none !important;
+    background-image: none !important;
+    -webkit-background-clip: border-box !important;
+    background-clip: border-box !important;
     opacity: 1 !important;
   }
-
-  /* Quem é */
-  .about-copy blockquote {
+  .reach > strong {
     color: #71351f !important;
     -webkit-text-fill-color: #71351f !important;
+    background: none !important;
+    background-image: none !important;
+    -webkit-background-clip: border-box !important;
+    background-clip: border-box !important;
+  }
+
+  /* Quem é — frase final com contraste real */
+  .about blockquote {
+    color: #71351f !important;
+    -webkit-text-fill-color: #71351f !important;
+    background: none !important;
+    background-image: none !important;
+    -webkit-background-clip: border-box !important;
+    background-clip: border-box !important;
     opacity: 1 !important;
+    border-left-color: #964430 !important;
   }
 
   /* Café também é conhecimento */
   .workshop-tags {
     color: #71351f !important;
     -webkit-text-fill-color: #71351f !important;
+    background: none !important;
+    background-image: none !important;
+    -webkit-background-clip: border-box !important;
+    background-clip: border-box !important;
     opacity: 1 !important;
   }
 
-  /* Café Rafa Palma na sua casa */
+  /* Café na sua casa — selos legíveis de verdade */
   .coffee-benefits span {
     color: #71351f !important;
     -webkit-text-fill-color: #71351f !important;
-    border-color: rgba(113,53,31,.55) !important;
+    background: #e2d5c7 !important;
+    background-image: none !important;
+    -webkit-background-clip: border-box !important;
+    background-clip: border-box !important;
+    border: 1px solid rgba(113,53,31,.45) !important;
     opacity: 1 !important;
   }
 }
