@@ -408,6 +408,127 @@
 }
 </style>
 
+
+<style id="v28-final-fixes">
+/* V28 — somente os três ajustes finais aprovados */
+
+/* 1. Barra da citação em QUEM É: marrom da identidade */
+#quem-e blockquote,
+#quem-e .quote,
+#quem-e .about-quote,
+.quem-e blockquote,
+.quem-e .quote,
+.quem-e .about-quote,
+.about blockquote,
+.about .quote,
+.about .about-quote {
+  border-left-color: #8a3d2b !important;
+}
+
+/* cobre barras desenhadas por pseudo-elemento */
+#quem-e blockquote::before,
+#quem-e .quote::before,
+#quem-e .about-quote::before,
+.quem-e blockquote::before,
+.quem-e .quote::before,
+.quem-e .about-quote::before,
+.about blockquote::before,
+.about .quote::before,
+.about .about-quote::before {
+  background-color: #8a3d2b !important;
+}
+
+/* 2. Contatos do rodapé: off-white/creme */
+footer a[href^="tel:"],
+footer a[href^="mailto:"],
+footer a[href*="instagram.com"],
+footer .contact a,
+footer .footer-contact a,
+footer .footer-contacts a {
+  color: #f2e7d8 !important;
+}
+
+/* 3. Xícara de MOMENTOS — contorno, marrom, centralizada e proporcional */
+.v28-cup-outline {
+  width: 30px;
+  height: 20px;
+  border: 3px solid #8a3d2b;
+  border-top: 0;
+  border-radius: 0 0 9px 9px;
+  position: relative;
+  display: block;
+  margin: 0 auto 12px;
+  box-sizing: border-box;
+  background: transparent !important;
+}
+.v28-cup-outline::after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: 3px;
+  width: 9px;
+  height: 10px;
+  border: 3px solid #8a3d2b;
+  border-left: 0;
+  border-radius: 0 8px 8px 0;
+  box-sizing: border-box;
+}
+.v28-cup-outline::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  right: -5px;
+  bottom: -7px;
+  height: 3px;
+  border-radius: 3px;
+  background: #8a3d2b;
+}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  /* Localiza o bloco cujo texto é "Momentos" e troca apenas o ícone */
+  const all = Array.from(document.querySelectorAll('body *'));
+  const label = all.find(el =>
+    el.children.length === 0 &&
+    el.textContent.trim().toLowerCase() === 'momentos'
+  );
+
+  if (label) {
+    let card = label.parentElement;
+    /* sobe poucos níveis até achar um bloco que também contenha "que ficam" */
+    for (let i = 0; i < 4 && card; i++) {
+      if ((card.textContent || '').toLowerCase().includes('que ficam')) break;
+      card = card.parentElement;
+    }
+
+    if (card) {
+      const candidates = Array.from(card.children).filter(el => el !== label);
+      let icon = candidates.find(el =>
+        el.tagName === 'SVG' ||
+        el.tagName === 'IMG' ||
+        /icon|icone|cup|coffee/i.test(el.className || '')
+      );
+
+      if (!icon) {
+        icon = card.querySelector('svg, img, i, .icon, .icone');
+      }
+
+      if (icon) {
+        const cup = document.createElement('span');
+        cup.className = 'v28-cup-outline';
+        cup.setAttribute('aria-hidden', 'true');
+        icon.replaceWith(cup);
+      } else {
+        const cup = document.createElement('span');
+        cup.className = 'v28-cup-outline';
+        cup.setAttribute('aria-hidden', 'true');
+        card.insertBefore(cup, label);
+      }
+    }
+  }
+});
+</script>
+
 </head>
 <body>
   <header class="site-header" id="inicio">
