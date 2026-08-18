@@ -519,6 +519,59 @@ footer a:active{
 }
 </style>
 
+
+<style id="v32-link-colors-final">
+:root{
+  --rp-menu:#f1e6d8;
+  --rp-brown:#8b3f2d;
+  --rp-gold:#c99337;
+}
+
+/* O navegador Samsung não deve recolorir links já visitados/clicados. */
+.main-nav a,
+.main-nav a:link,
+.main-nav a:visited,
+.main-nav a:hover,
+.main-nav a:active,
+.main-nav a:focus {
+  color:var(--rp-menu)!important;
+  -webkit-text-fill-color:var(--rp-menu)!important;
+  text-decoration:none!important;
+  forced-color-adjust:none!important;
+  -webkit-tap-highlight-color:rgba(139,63,45,.15)!important;
+  outline:none!important;
+}
+
+.main-nav .nav-cta,
+.main-nav .nav-cta:link,
+.main-nav .nav-cta:visited,
+.main-nav .nav-cta:hover,
+.main-nav .nav-cta:active,
+.main-nav .nav-cta:focus {
+  color:var(--rp-gold)!important;
+  -webkit-text-fill-color:var(--rp-gold)!important;
+  border-color:var(--rp-gold)!important;
+  forced-color-adjust:none!important;
+}
+
+/* Demais botões/CTAs não mudam de cor depois do clique. */
+.btn,
+.btn:link,
+.btn:visited,
+.btn:hover,
+.btn:active,
+.btn:focus,
+.whatsapp-float,
+.whatsapp-float:link,
+.whatsapp-float:visited,
+.whatsapp-float:hover,
+.whatsapp-float:active,
+.whatsapp-float:focus {
+  forced-color-adjust:none!important;
+  -webkit-tap-highlight-color:rgba(139,63,45,.15)!important;
+}
+</style>
+
 </head>
 <body>
   <header class="site-header" id="inicio">
@@ -543,7 +596,7 @@ footer a:active{
         <h1>Café Rafa Palma<br><span>no seu evento.</span></h1>
         <p class="hero-copy">Experiências com café especial que transformam encontros em momentos memoráveis.</p>
         <div class="actions">
-          <a class="btn btn-primary" target="_blank" rel="noopener" href="https://wa.me/5555991128100?text=Ol%C3%A1%21%20Conheci%20o%20trabalho%20do%20Rafa%20Palma%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.">Quero Rafa Palma no meu evento</a>
+          <a class="btn btn-primary" target="_blank" rel="noopener" href="https://wa.me/5555991128100?text=Ol%C3%A1%21%20Conheci%20o%20trabalho%20do%20Rafa%20Palma%20pelo%20site%20e%20gostaria%20de%20levar%20a%20experi%C3%AAncia%20Rafa%20Palma%20para%20o%20meu%20evento.%20Podemos%20conversar%3F">Quero Rafa Palma no meu evento</a>
           <a class="btn btn-ghost" href="#eventos">Conheça nossas experiências</a>
         </div>
       </div>
@@ -614,7 +667,7 @@ footer a:active{
     <section class="coffee-shop section-cream" id="cafes">
       <div class="container coffee-grid">
         <div class="coffee-photo"><img src="assets/images/cafe-rafa-palmas.jpg" alt="Embalagens de Café Rafa Palma" loading="lazy"></div>
-        <div class="coffee-copy"><p class="eyebrow dark">Café Rafa Palma na sua casa</p><h2>Da nossa torrefação para todo o Brasil.</h2><p class="script">O café da experiência Rafa Palma, também na sua xícara.</p><p>Cafés especiais selecionados e torrados por Rafa Palma em nossa própria torrefação. Escolha em grãos ou moído e receba em qualquer lugar do Brasil — para apreciar em casa ou transformar em presente.</p><div class="coffee-benefits"><span>Torra própria</span><span>Em grãos ou moído</span><span>Envio para todo o Brasil</span></div><a class="btn btn-primary" target="_blank" rel="noopener" href="https://wa.me/5555991128100?text=Ol%C3%A1%21%20Conheci%20o%20trabalho%20do%20Rafa%20Palma%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.">Quero comprar Café Rafa Palma</a></div>
+        <div class="coffee-copy"><p class="eyebrow dark">Café Rafa Palma na sua casa</p><h2>Da nossa torrefação para todo o Brasil.</h2><p class="script">O café da experiência Rafa Palma, também na sua xícara.</p><p>Cafés especiais selecionados e torrados por Rafa Palma em nossa própria torrefação. Escolha em grãos ou moído e receba em qualquer lugar do Brasil — para apreciar em casa ou transformar em presente.</p><div class="coffee-benefits"><span>Torra própria</span><span>Em grãos ou moído</span><span>Envio para todo o Brasil</span></div><a class="btn btn-primary" target="_blank" rel="noopener" href="https://wa.me/5555991128100?text=Ol%C3%A1%21%20Conheci%20os%20caf%C3%A9s%20Rafa%20Palma%20pelo%20site%20e%20gostaria%20de%20comprar%20Caf%C3%A9%20Rafa%20Palma.%20Pode%20me%20passar%20as%20op%C3%A7%C3%B5es%20dispon%C3%ADveis%3F">Quero comprar Café Rafa Palma</a></div>
       </div>
     </section>
 
@@ -626,7 +679,7 @@ footer a:active{
           <article><div class="company-image"><img src="assets/images/agrofel-estrutura.jpeg" alt="Estrutura de Café Rafa Palma na Agrofel" loading="lazy"></div><h3>Agrofel • Colheita do Arroz</h3><p>Capão do Leão/RS • Máquinas e estrutura de café especial integradas ao evento.</p></article>
           <article class="machine-card"><div class="company-image video-preview company-video"><img src="assets/images/maquina-rafa-palma.jpeg" alt="Máquina de café passado Rafa Palma" loading="lazy"><button class="play-video" data-video="assets/videos/maquina-rafa-palma.mp4" aria-label="Assistir vídeo da máquina Rafa Palma"><span>▶</span> Ver máquina</button></div><h3>Máquinas Rafa Palma e cafés especiais para sua empresa</h3><p>Venda ou locação · Café Rafa Palma</p></article>
         </div><div class="company-benefits"><span>Máquinas</span><span>Café Rafa Palma</span><span>Venda ou locação</span></div>
-        <a class="btn btn-primary" target="_blank" rel="noopener" href="https://wa.me/5555991128100?text=Ol%C3%A1%21%20Conheci%20o%20trabalho%20do%20Rafa%20Palma%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.">Quero café Rafa Palma na minha empresa</a>
+        <a class="btn btn-primary" target="_blank" rel="noopener" href="https://wa.me/5555991128100?text=Ol%C3%A1%21%20Conheci%20o%20trabalho%20do%20Rafa%20Palma%20pelo%20site%20e%20gostaria%20de%20ter%20Caf%C3%A9%20Rafa%20Palma%20na%20minha%20empresa.%20Quero%20saber%20mais%20sobre%20as%20m%C3%A1quinas%20e%20as%20op%C3%A7%C3%B5es%20de%20venda%20ou%20loca%C3%A7%C3%A3o.">Quero café Rafa Palma na minha empresa</a>
       </div>
     </section>
 
@@ -635,7 +688,7 @@ footer a:active{
       <div class="copy panel-light"><p class="eyebrow dark">Essência da marca</p><h2>Café: <em>o afeto ao redor da mesa.</em></h2><p><strong>Antes de ser produto, o café é encontro.</strong> É conversa, acolhimento, família e memória.</p><p>Foi ao redor da mesa que muitas histórias começaram — e é essa essência que Rafa Palma leva para cada xícara, cada evento e cada experiência.</p></div>
     </section>
 
-    <section class="final-cta" id="contato"><div class="final-bg"></div><div class="container final-content"><p class="eyebrow">Seu próximo evento</p><h2>Pode ter essa experiência.</h2><p>Leve a experiência Rafa Palma para sua empresa, feira, exposição, camarote ou evento especial.</p><p class="national-service">Atendimento em todo o Brasil.</p><a class="btn btn-primary btn-large" target="_blank" rel="noopener" href="https://wa.me/5555991128100?text=Ol%C3%A1%21%20Conheci%20o%20trabalho%20do%20Rafa%20Palma%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.">Solicitar orçamento pelo WhatsApp</a></div></section>
+    <section class="final-cta" id="contato"><div class="final-bg"></div><div class="container final-content"><p class="eyebrow">Seu próximo evento</p><h2>Pode ter essa experiência.</h2><p>Leve a experiência Rafa Palma para sua empresa, feira, exposição, camarote ou evento especial.</p><p class="national-service">Atendimento em todo o Brasil.</p><a class="btn btn-primary btn-large" target="_blank" rel="noopener" href="https://wa.me/5555991128100?text=Ol%C3%A1%21%20Vim%20pelo%20site%20do%20Rafa%20Palma%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento.">Solicitar orçamento pelo WhatsApp</a></div></section>
   </main>
 
   <div class="video-modal" aria-hidden="true"><button class="video-close" aria-label="Fechar vídeo">×</button><video controls playsinline></video></div>
