@@ -407,42 +407,6 @@
   }
 }
 </style>
-
-
-
-<style id="v30-cup-final">
-@media (max-width:560px){
-  .experience .feature-grid span:nth-child(4) .rp-cup-icon{
-    width:29px!important;
-    height:19px!important;
-    position:relative!important;
-    display:block!important;
-    margin:0 auto 11px!important;
-    border:2.5px solid #8b3f2d!important;
-    border-radius:3px 3px 9px 9px!important;
-    background:transparent!important;
-    box-sizing:border-box!important;
-    font-size:0!important;
-    color:transparent!important;
-    -webkit-text-fill-color:transparent!important;
-  }
-  .experience .feature-grid span:nth-child(4) .rp-cup-icon::after{
-    content:""!important;
-    position:absolute!important;
-    right:-10px!important;
-    top:3px!important;
-    width:9px!important;
-    height:10px!important;
-    border:2.5px solid #8b3f2d!important;
-    border-left:0!important;
-    border-radius:0 7px 7px 0!important;
-    box-sizing:border-box!important;
-    background:transparent!important;
-  }
-}
-</style>
-
-
 <style id="v30-footer-final">
 footer a[href^="tel:"],
 footer a[href^="mailto:"],
@@ -461,39 +425,6 @@ footer a[href*="instagram.com"]{
 :root{
   --rp-brown:#8b3f2d;
   --rp-cream:#f1e6d8;
-}
-
-/* Xícara Momentos */
-.rp-final-cup{
-  width:30px!important;
-  height:20px!important;
-  display:block!important;
-  position:relative!important;
-  margin:0 auto 12px!important;
-  border:2.5px solid var(--rp-brown)!important;
-  border-radius:3px 3px 9px 9px!important;
-  background:transparent!important;
-  box-sizing:border-box!important;
-}
-.rp-final-cup::after{
-  content:""!important;
-  position:absolute!important;
-  right:-10px!important;
-  top:3px!important;
-  width:9px!important;
-  height:10px!important;
-  border:2.5px solid var(--rp-brown)!important;
-  border-left:0!important;
-  border-radius:0 7px 7px 0!important;
-  box-sizing:border-box!important;
-}
-.experience .feature-grid span:nth-child(4){
-  text-align:center!important;
-}
-.experience .feature-grid span:nth-child(4) b,
-.experience .feature-grid span:nth-child(4) svg,
-.experience .feature-grid span:nth-child(4) i{
-  display:none!important;
 }
 
 /* Barra da citação Quem é */
@@ -572,6 +503,23 @@ footer a:active{
 }
 </style>
 
+
+<style id="v34-cup-svg-final">
+.experience .feature-grid span:nth-child(4){
+  text-align:center!important;
+}
+.experience .feature-grid span:nth-child(4) .rp-cup-svg{
+  width:27px!important;
+  height:27px!important;
+  display:block!important;
+  margin:0 auto 10px!important;
+  overflow:visible!important;
+  color:initial!important;
+  opacity:1!important;
+  filter:none!important;
+}
+</style>
+
 </head>
 <body>
   <header class="site-header" id="inicio">
@@ -609,7 +557,14 @@ footer a:active{
         <h2><span class="experience-title-line">Não servimos apenas café.</span><br><em>Criamos experiências.</em></h2>
         <p>Do primeiro aroma à última xícara, cada detalhe é pensado para acolher, aproximar pessoas e tornar o evento inesquecível.</p>
         <div class="feature-grid">
-          <span><b>◔</b> Aroma<small>que acolhe</small></span><span><b>♡</b> Preparo<small>que encanta</small></span><span><b>◎</b> Conexão<small>que aproxima</small></span><span><span class="rp-final-cup" aria-hidden="true"></span> Momentos<small>que ficam</small></span>
+          <span><b>◔</b> Aroma<small>que acolhe</small></span><span><b>♡</b> Preparo<small>que encanta</small></span><span><b>◎</b> Conexão<small>que aproxima</small></span><span><svg class="rp-cup-svg" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <path d="M9 15H34V27C34 34 29 38 21.5 38C14 38 9 34 9 27V15Z"
+        fill="none" stroke="#8b3f2d" stroke-width="3"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M34 19H38C42 19 44 21.5 44 25C44 28.5 42 31 38 31H34"
+        fill="none" stroke="#8b3f2d" stroke-width="3"
+        stroke-linecap="round" stroke-linejoin="round"/>
+</svg> <span class="rp-final-cup" aria-hidden="true"></span> Momentos<small>que ficam</small></span>
         </div>
       </div>
     </section>
@@ -739,72 +694,6 @@ footer .footer-contacts a {
   -webkit-text-fill-color: var(--rp-cream) !important;
 }
 
-/* Nova xícara — somente contorno */
-.rp-final-cup {
-  width: 34px !important;
-  height: 23px !important;
-  position: relative !important;
-  display: block !important;
-  margin: 0 auto 14px !important;
-  border: 3px solid var(--rp-brown) !important;
-  border-top: 3px solid var(--rp-brown) !important;
-  border-radius: 3px 3px 11px 11px !important;
-  background: transparent !important;
-  box-sizing: border-box !important;
-  color: transparent !important;
-  font-size: 0 !important;
-}
-.rp-final-cup::after{
-  content:"" !important;
-  position:absolute !important;
-  right:-12px !important;
-  top:4px !important;
-  width:11px !important;
-  height:12px !important;
-  border:3px solid var(--rp-brown) !important;
-  border-left:0 !important;
-  border-radius:0 8px 8px 0 !important;
-  background:transparent !important;
-  box-sizing:border-box !important;
-}
 </style>
-
-
-
-
-<style id="v33-cup-only-final">
-/* V33 — xícara Momentos aprovada: apenas contorno, marrom, centralizada */
-.experience .feature-grid span:nth-child(4) .rp-final-cup{
-  width:30px!important;
-  height:20px!important;
-  display:block!important;
-  position:relative!important;
-  margin:0 auto 12px!important;
-  border:2.5px solid #8b3f2d!important;
-  border-radius:3px 3px 9px 9px!important;
-  background:transparent!important;
-  background-image:none!important;
-  box-sizing:border-box!important;
-  color:transparent!important;
-  -webkit-text-fill-color:transparent!important;
-  font-size:0!important;
-  opacity:1!important;
-}
-.experience .feature-grid span:nth-child(4) .rp-final-cup::after{
-  content:""!important;
-  position:absolute!important;
-  right:-10px!important;
-  top:3px!important;
-  width:9px!important;
-  height:10px!important;
-  border:2.5px solid #8b3f2d!important;
-  border-left:0!important;
-  border-radius:0 7px 7px 0!important;
-  background:transparent!important;
-  background-image:none!important;
-  box-sizing:border-box!important;
-}
-</style>
-
 </body>
 </html>
