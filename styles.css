@@ -485,3 +485,125 @@ body{
     background-image:linear-gradient(#c99337,#c99337) !important;
   }
 }
+
+/* V18 — mobile: paleta blindada + correção de overflow horizontal */
+html,body{max-width:100%;overflow-x:clip;}
+img,video,svg,iframe{max-width:100%;}
+
+@media(max-width:560px){
+  html,body{width:100%;max-width:100%;overflow-x:clip!important;}
+  main,header,footer,section,.container,.split,.copy,.media,.hero-content,.event-grid,.company-grid-v5,.coffee-grid,.workshops-grid,.roasting-grid{min-width:0;max-width:100%;}
+  img,video,svg,iframe{max-width:100%!important;height:auto;}
+
+  /* A linha aprovada no desktop não pode forçar a largura do celular. */
+  .experience-title-line{white-space:normal!important;}
+  .experience .copy h2{font-size:30px;overflow-wrap:anywhere;}
+
+  /* Hero com mais respiro lateral e sem altura artificial. */
+  .hero{height:auto!important;min-height:0!important;padding-top:68px!important;}
+  .hero .container{width:calc(100% - 40px)!important;margin-left:auto!important;margin-right:auto!important;}
+  .hero-content{padding-top:118px!important;padding-bottom:20px!important;}
+  .hero h1{font-size:42px!important;line-height:.96!important;max-width:100%!important;overflow-wrap:normal;}
+  .hero-copy{max-width:100%!important;font-size:16px!important;}
+  .hero .actions{margin-top:20px!important;gap:10px!important;}
+  .btn{max-width:100%!important;white-space:normal!important;text-align:center;overflow-wrap:anywhere;}
+
+  /* Imagens reais de cor sólida: o Samsung Internet trata como imagem e não como cor CSS. */
+  .panel-light,
+  .experience .copy,
+  .brazil .copy,
+  .about .copy,
+  .affection .copy{
+    background-color:transparent!important;
+    background-image:url('assets/images/bg-paper-mobile.png')!important;
+    background-repeat:repeat!important;
+    color:#151515!important;
+  }
+  .section-cream,
+  .workshops.section-cream,
+  .coffee-shop.section-cream{
+    background-color:transparent!important;
+    background-image:url('assets/images/bg-cream-mobile.png')!important;
+    background-repeat:repeat!important;
+    color:#151515!important;
+  }
+
+  /* Texto das áreas claras também é pintado com imagem sólida para não ser invertido. */
+  .panel-light h2,
+  .panel-light h3,
+  .panel-light p:not(.eyebrow):not(.script),
+  .panel-light strong,
+  .panel-light .feature-grid>span,
+  .section-cream h2,
+  .section-cream h3,
+  .section-cream p:not(.eyebrow):not(.script),
+  .section-cream strong,
+  .coffee-shop h2,
+  .coffee-shop h3,
+  .coffee-shop p:not(.eyebrow):not(.script){
+    color:transparent!important;
+    -webkit-text-fill-color:transparent!important;
+    background-image:url('assets/images/ink-fill-mobile.png')!important;
+    background-repeat:repeat!important;
+    -webkit-background-clip:text!important;
+    background-clip:text!important;
+  }
+
+  .panel-light .eyebrow.dark,
+  .panel-light .script,
+  .panel-light h2 em,
+  .section-cream .eyebrow.dark,
+  .section-cream .script,
+  .section-cream h2 em,
+  .coffee-shop .eyebrow.dark,
+  .coffee-shop .script,
+  .coffee-shop h2 em,
+  .coffee-benefits span,
+  .routes,
+  .reach strong{
+    color:transparent!important;
+    -webkit-text-fill-color:transparent!important;
+    background-image:url('assets/images/brown-fill-mobile.png')!important;
+    background-repeat:repeat!important;
+    -webkit-background-clip:text!important;
+    background-clip:text!important;
+  }
+
+  .feature-grid small{
+    color:transparent!important;
+    -webkit-text-fill-color:transparent!important;
+    background-image:url('assets/images/muted-fill-mobile.png')!important;
+    background-repeat:repeat!important;
+    -webkit-background-clip:text!important;
+    background-clip:text!important;
+  }
+  .feature-grid b{
+    color:transparent!important;
+    -webkit-text-fill-color:transparent!important;
+    background-image:url('assets/images/brown-fill-mobile.png')!important;
+    background-repeat:repeat!important;
+    -webkit-background-clip:text!important;
+    background-clip:text!important;
+  }
+
+  .coffee-benefits span,.routes span{
+    background-color:transparent!important;
+    background-image:url('assets/images/bg-paper-mobile.png')!important;
+    background-repeat:repeat!important;
+  }
+
+  /* Dourado verdadeiro da marca no botão e no WhatsApp. */
+  .btn-primary,.whatsapp-float{
+    background-color:transparent!important;
+    background-image:url('assets/images/bg-gold-mobile.png')!important;
+    background-repeat:repeat!important;
+  }
+
+  /* Nenhum bloco pode empurrar a página para a direita. */
+  .copy,.section-head,.event-card,.company-grid-v5 article,.company-image,.video-preview,.coffee-photo,.coffee-copy,.reach,.company-intro,.company-benefits{width:100%;max-width:100%;}
+  .footer-grid a,.footer-grid span,.company-grid-v5 p,.reach span{overflow-wrap:anywhere;word-break:normal;}
+}
+
+@supports not (overflow:clip){
+  html,body{overflow-x:hidden!important;}
+}
