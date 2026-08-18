@@ -10,6 +10,78 @@
   <title>Rafa Palma — Especialista em Café</title>
   <link rel="icon" href="favicon.png" />
   <link rel="stylesheet" href="styles.css" />
+
+<style id="v19-mobile-final-refinements">
+@media (max-width: 768px) {
+  /* 1) Momentos: keep the cup icon visually consistent with the other icons */
+  .essence-grid .essence-item:nth-child(4) .essence-icon,
+  .essence-grid .essence-item:nth-child(4) .icon,
+  .experience-values .value:nth-child(4) .icon,
+  .experience-values .value:nth-child(4) .value-icon {
+    font-size: 30px !important;
+    width: 34px !important;
+    height: 34px !important;
+    line-height: 34px !important;
+    transform: none !important;
+  }
+
+  /* 2) Light sections: stronger brand-brown contrast for secondary/highlight copy */
+  #brasil .callout,
+  #brasil .callout p,
+  #brasil .callout strong,
+  .brasil .callout,
+  .brasil .callout p,
+  .brasil .callout strong {
+    color: #71351f !important;
+    -webkit-text-fill-color: #71351f !important;
+  }
+
+  #sobre blockquote,
+  #sobre blockquote p,
+  #quem-e blockquote,
+  #quem-e blockquote p,
+  .about blockquote,
+  .about blockquote p {
+    color: #71351f !important;
+    -webkit-text-fill-color: #71351f !important;
+    opacity: 1 !important;
+  }
+
+  #conhecimento .topics,
+  #conhecimento .topics *,
+  #conhecimento .tags-line,
+  #conhecimento .tags-line *,
+  .knowledge .topics,
+  .knowledge .topics *,
+  .knowledge .tags-line,
+  .knowledge .tags-line * {
+    color: #71351f !important;
+    -webkit-text-fill-color: #71351f !important;
+    opacity: 1 !important;
+  }
+
+  /* 3) Home-coffee benefit pills: restore readable contrast */
+  #cafe-em-casa .pill,
+  #cafe-em-casa .tag,
+  #cafe-em-casa .chips span,
+  #cafe-em-casa .badges span,
+  .home-coffee .pill,
+  .home-coffee .tag,
+  .home-coffee .chips span,
+  .home-coffee .badges span {
+    color: #71351f !important;
+    -webkit-text-fill-color: #71351f !important;
+    border-color: rgba(113,53,31,.48) !important;
+    opacity: 1 !important;
+  }
+
+  /* 4) Slightly tighter transitions between large mobile sections */
+  section {
+    scroll-margin-top: 96px;
+  }
+}
+</style>
+
 </head>
 <body>
   <header class="site-header" id="inicio">
