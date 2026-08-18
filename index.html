@@ -13,17 +13,78 @@
 
 
 
-<style id="v21-mobile-real-fixes">
-@media (max-width: 768px) {
 
-  /* MOMENTOS: remove emoji nativo do Samsung e desenha uma xícara controlável em CSS */
+<style id="v22-final-mobile-fixes">
+@media (max-width: 768px) {
+  /* Impede seções ancoradas/conteúdo de ficarem escondidos sob o header fixo */
+  section, [id] { scroll-margin-top: 118px !important; }
+
+  /* Rafa Palma pelo Brasil */
+  .reach {
+    padding-top: 72px !important;
+  }
+  .reach .eyebrow,
+  .reach > p:last-child,
+  .reach > div,
+  .reach span,
+  .reach span strong {
+    background: transparent !important;
+    background-image: none !important;
+    -webkit-background-clip: border-box !important;
+    background-clip: border-box !important;
+    opacity: 1 !important;
+  }
+  .reach span,
+  .reach span strong {
+    color: #71351f !important;
+    -webkit-text-fill-color: #71351f !important;
+  }
+
+  /* Quem é: citação final — marrom escuro, alto contraste */
+  .about blockquote,
+  .about blockquote * {
+    color: #71351f !important;
+    -webkit-text-fill-color: #71351f !important;
+    background: transparent !important;
+    background-image: none !important;
+    -webkit-background-clip: border-box !important;
+    background-clip: border-box !important;
+    opacity: 1 !important;
+  }
+  .about blockquote { border-left-color: #964430 !important; }
+
+  /* Café também é conhecimento */
+  .workshop-tags,
+  .workshop-tags * {
+    color: #71351f !important;
+    -webkit-text-fill-color: #71351f !important;
+    background: transparent !important;
+    background-image: none !important;
+    -webkit-background-clip: border-box !important;
+    background-clip: border-box !important;
+    opacity: 1 !important;
+  }
+
+  /* Selos: preservar exatamente a solução que funcionou na v21 */
+  .coffee-benefits span {
+    color: #f2ddd0 !important;
+    -webkit-text-fill-color: #f2ddd0 !important;
+    background: #2a0b03 !important;
+    background-image: none !important;
+    -webkit-background-clip: border-box !important;
+    background-clip: border-box !important;
+    border: 1px solid rgba(113,53,31,.45) !important;
+    opacity: 1 !important;
+  }
+
+  /* Momentos: sem emoji nativo; xícara pequena desenhada em CSS */
   .pillars span:nth-child(4) b {
     font-size: 0 !important;
-    width: 28px !important;
-    height: 28px !important;
+    width: 26px !important;
+    height: 26px !important;
     display: inline-block !important;
     position: relative !important;
-    background: none !important;
+    background: transparent !important;
     background-image: none !important;
     -webkit-background-clip: border-box !important;
     background-clip: border-box !important;
@@ -32,13 +93,13 @@
   .pillars span:nth-child(4) b::before {
     content: "" !important;
     position: absolute !important;
-    width: 18px !important;
-    height: 11px !important;
+    width: 17px !important;
+    height: 10px !important;
     left: 3px !important;
     top: 7px !important;
     border: 2px solid #873b28 !important;
     border-top: 0 !important;
-    border-radius: 2px 2px 8px 8px !important;
+    border-radius: 2px 2px 7px 7px !important;
     box-sizing: border-box !important;
   }
   .pillars span:nth-child(4) b::after {
@@ -47,66 +108,11 @@
     width: 7px !important;
     height: 7px !important;
     right: 0 !important;
-    top: 9px !important;
+    top: 8px !important;
     border: 2px solid #873b28 !important;
     border-left: 0 !important;
     border-radius: 0 6px 6px 0 !important;
     box-sizing: border-box !important;
-  }
-
-  /* Rafa Palma pelo Brasil — retirar background-clip/text-image */
-  .reach span,
-  .reach span strong {
-    color: #5f4638 !important;
-    -webkit-text-fill-color: #5f4638 !important;
-    background: none !important;
-    background-image: none !important;
-    -webkit-background-clip: border-box !important;
-    background-clip: border-box !important;
-    opacity: 1 !important;
-  }
-  .reach > strong {
-    color: #71351f !important;
-    -webkit-text-fill-color: #71351f !important;
-    background: none !important;
-    background-image: none !important;
-    -webkit-background-clip: border-box !important;
-    background-clip: border-box !important;
-  }
-
-  /* Quem é — frase final com contraste real */
-  .about blockquote {
-    color: #71351f !important;
-    -webkit-text-fill-color: #71351f !important;
-    background: none !important;
-    background-image: none !important;
-    -webkit-background-clip: border-box !important;
-    background-clip: border-box !important;
-    opacity: 1 !important;
-    border-left-color: #964430 !important;
-  }
-
-  /* Café também é conhecimento */
-  .workshop-tags {
-    color: #71351f !important;
-    -webkit-text-fill-color: #71351f !important;
-    background: none !important;
-    background-image: none !important;
-    -webkit-background-clip: border-box !important;
-    background-clip: border-box !important;
-    opacity: 1 !important;
-  }
-
-  /* Café na sua casa — selos legíveis de verdade */
-  .coffee-benefits span {
-    color: #71351f !important;
-    -webkit-text-fill-color: #71351f !important;
-    background: #e2d5c7 !important;
-    background-image: none !important;
-    -webkit-background-clip: border-box !important;
-    background-clip: border-box !important;
-    border: 1px solid rgba(113,53,31,.45) !important;
-    opacity: 1 !important;
   }
 }
 </style>
