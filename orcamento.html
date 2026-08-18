@@ -39,6 +39,122 @@
       .budget-form{padding:24px}
     }
   </style>
+
+<style id="v30-orcamento-final">
+:root{
+  --rp-brown:#8b3f2d;
+  --rp-cream:#f1e6d8;
+}
+
+/* Remove rosa/salmão dos destaques do orçamento */
+.orcamento .eyebrow,
+.orcamento .highlight,
+.orcamento .accent,
+.orcamento .label-accent,
+.orcamento-form .eyebrow,
+.orcamento-form .highlight,
+.orcamento-form .accent,
+.orcamento-form .label-accent,
+form .eyebrow,
+form .highlight,
+form .accent{
+  color:var(--rp-brown)!important;
+  -webkit-text-fill-color:var(--rp-brown)!important;
+  background:none!important;
+  background-image:none!important;
+  -webkit-background-clip:border-box!important;
+  background-clip:border-box!important;
+}
+
+/* Barras e linhas decorativas em marrom */
+.orcamento blockquote,
+.orcamento .note,
+.orcamento .info-box,
+.orcamento .accent-box,
+.orcamento-form blockquote,
+.orcamento-form .note,
+.orcamento-form .info-box,
+.orcamento-form .accent-box{
+  border-left-color:var(--rp-brown)!important;
+}
+
+.orcamento blockquote::before,
+.orcamento .note::before,
+.orcamento .info-box::before,
+.orcamento .accent-box::before,
+.orcamento-form blockquote::before,
+.orcamento-form .note::before,
+.orcamento-form .info-box::before,
+.orcamento-form .accent-box::before{
+  background:var(--rp-brown)!important;
+}
+
+/* Proteção extra para linhas decorativas com classes genéricas */
+[class*="accent-line"],
+[class*="line-accent"]{
+  border-color:var(--rp-brown)!important;
+}
+[class*="accent-line"]::before,
+[class*="accent-line"]::after,
+[class*="line-accent"]::before,
+[class*="line-accent"]::after{
+  background:var(--rp-brown)!important;
+}
+
+@media (max-width:560px){
+  input[type="date"],
+  input[type="time"],
+  .date-picker,
+  .date-row,
+  .date-controls{
+    font-size:14px!important;
+    min-height:40px!important;
+  }
+
+  .date-row,
+  .date-controls,
+  .date-actions{
+    display:flex!important;
+    flex-wrap:wrap!important;
+    gap:5px!important;
+    align-items:center!important;
+  }
+
+  .date-row a,
+  .date-controls a,
+  .date-row button,
+  .date-controls button,
+  .date-actions button,
+  .date-actions a,
+  button[data-action]{
+    font-size:11px!important;
+    padding:7px 9px!important;
+    min-height:34px!important;
+    line-height:1.05!important;
+    white-space:nowrap!important;
+  }
+
+  .btn-definir,
+  #definir,
+  [data-action="definir"]{
+    font-size:11px!important;
+    padding:7px 11px!important;
+    min-height:34px!important;
+    flex:0 0 auto!important;
+    max-width:100%!important;
+  }
+
+  button[type="submit"],
+  .submit,
+  .btn-submit,
+  .send-request{
+    width:100%!important;
+    white-space:normal!important;
+    line-height:1.15!important;
+  }
+}
+</style>
+
 </head>
 <body>
   <header class="site-header">
