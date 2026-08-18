@@ -14,58 +14,32 @@
 
 
 
-<style id="v22-final-mobile-fixes">
+<style id="v23-mobile-targeted-fixes">
 @media (max-width: 768px) {
-  /* Impede seções ancoradas/conteúdo de ficarem escondidos sob o header fixo */
   section, [id] { scroll-margin-top: 118px !important; }
 
-  /* Rafa Palma pelo Brasil */
-  .reach {
-    padding-top: 72px !important;
-  }
-  .reach .eyebrow,
-  .reach > p:last-child,
-  .reach > div,
-  .reach span,
-  .reach span strong {
-    background: transparent !important;
-    background-image: none !important;
-    -webkit-background-clip: border-box !important;
-    background-clip: border-box !important;
-    opacity: 1 !important;
-  }
-  .reach span,
-  .reach span strong {
-    color: #71351f !important;
-    -webkit-text-fill-color: #71351f !important;
-  }
-
-  /* Quem é: citação final — marrom escuro, alto contraste */
+  /* V23: estes textos usam a mesma técnica de imagem sólida já usada
+     no restante do mobile, evitando a inversão de cores do Samsung Internet. */
+  .brazil .reach span,
+  .brazil .reach span strong,
   .about blockquote,
-  .about blockquote * {
-    color: #71351f !important;
-    -webkit-text-fill-color: #71351f !important;
-    background: transparent !important;
-    background-image: none !important;
-    -webkit-background-clip: border-box !important;
-    background-clip: border-box !important;
+  .about blockquote *,
+  .workshops .workshop-tags,
+  .workshops .workshop-tags * {
+    color: transparent !important;
+    -webkit-text-fill-color: transparent !important;
+    background-color: transparent !important;
+    background-image: url('assets/images/brown-fill-mobile.png') !important;
+    background-repeat: repeat !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
     opacity: 1 !important;
   }
+
   .about blockquote { border-left-color: #964430 !important; }
+  .brazil .reach { padding-top: 0 !important; }
 
-  /* Café também é conhecimento */
-  .workshop-tags,
-  .workshop-tags * {
-    color: #71351f !important;
-    -webkit-text-fill-color: #71351f !important;
-    background: transparent !important;
-    background-image: none !important;
-    -webkit-background-clip: border-box !important;
-    background-clip: border-box !important;
-    opacity: 1 !important;
-  }
-
-  /* Selos: preservar exatamente a solução que funcionou na v21 */
+  /* Selos: manter o contraste que já funcionou. */
   .coffee-benefits span {
     color: #f2ddd0 !important;
     -webkit-text-fill-color: #f2ddd0 !important;
@@ -77,7 +51,7 @@
     opacity: 1 !important;
   }
 
-  /* Momentos: sem emoji nativo; xícara pequena desenhada em CSS */
+  /* Momentos: xícara pequena desenhada em CSS. */
   .pillars span:nth-child(4) b {
     font-size: 0 !important;
     width: 26px !important;
@@ -113,6 +87,20 @@
     border-left: 0 !important;
     border-radius: 0 6px 6px 0 !important;
     box-sizing: border-box !important;
+  }
+}
+</style>
+
+
+<style id="v24-mobile-title-one-line">
+@media (max-width: 768px) {
+  .experience-title-line {
+    display: block !important;
+    white-space: nowrap !important;
+    font-size: clamp(24px, 6.4vw, 30px) !important;
+    letter-spacing: -0.025em !important;
+    line-height: 1.08 !important;
+    max-width: 100% !important;
   }
 }
 </style>
