@@ -770,6 +770,57 @@ a, button, input, select, textarea, svg, path, circle{
 }
 </style>
 
+
+<style id="v53-mobile-refinements">
+@media (max-width:560px){
+
+  /* V53 — refinamentos acumulados, sem alterar cores, textos ou estrutura */
+
+  /* Quem é Rafa Palma */
+  .about .script{
+    margin-bottom:20px !important;
+  }
+  .about blockquote{
+    margin-top:28px !important;
+  }
+
+  /* Café também é conhecimento */
+  .workshops .workshop-tags{
+    margin-top:18px !important;
+    margin-bottom:26px !important;
+  }
+  .workshops-grid{
+    margin-top:0 !important;
+  }
+
+  /* Café Rafa Palma na sua casa */
+  .coffee-shop .coffee-grid{
+    margin-top:24px !important;
+  }
+  .coffee-benefits{
+    gap:9px !important;
+  }
+  .coffee-benefits span{
+    font-size:13px !important;
+    line-height:1.25 !important;
+    padding:9px 11px !important;
+  }
+
+  /* Remove os pequenos círculos claros decorativos recorrentes */
+  .about .dot,
+  .about .circle,
+  .workshops .dot,
+  .workshops .circle,
+  .coffee-shop .dot,
+  .coffee-shop .circle,
+  .about .event-dot,
+  .workshops .event-dot,
+  .coffee-shop .event-dot{
+    display:none !important;
+  }
+}
+</style>
+
 </head>
 <body>
   <header class="site-header" id="inicio">
