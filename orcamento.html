@@ -525,6 +525,33 @@ textarea:focus {
 }
 </style>
 
+
+<style id="v41-budget-fixes">
+@media(max-width:560px){
+  .budget-intro h1{
+    font-size:40px !important;
+    line-height:1.02 !important;
+    letter-spacing:-1.4px !important;
+  }
+  .budget-intro .script{
+    font-size:23px !important;
+    line-height:1.18 !important;
+  }
+}
+.time-select{
+  min-height:56px !important;
+  height:56px !important;
+  width:100% !important;
+  padding:0 44px 0 14px !important;
+  font-size:17px !important;
+  border:1px solid #bda99a !important;
+  border-radius:10px !important;
+  background:#fffdfa !important;
+  color:#171310 !important;
+  -webkit-text-fill-color:#171310 !important;
+}
+</style>
+
 </head>
 <body>
   <header class="site-header">
@@ -567,67 +594,259 @@ textarea:focus {
             <input id="data" name="data" type="date">
           </div>
           <div class="form-field"><label for="publico">Número estimado de pessoas</label><input id="publico" name="publico" type="number" min="1"></div>
-          <div class="form-field schedule-field"><label for="inicio">Horário de início</label><input id="inicio" name="inicio" type="time" step="900"></div>
-          <div class="form-field schedule-field"><label for="fim">Horário de término</label><input id="fim" name="fim" type="time" step="900"></div>
+          <div class="form-field schedule-field"><label for="inicio">Horário de início</label><select id="inicio" name="inicio" class="time-select"><option value="">Selecione</option>
+<option value="00:00">00:00</option>
+<option value="00:15">00:15</option>
+<option value="00:30">00:30</option>
+<option value="00:45">00:45</option>
+<option value="01:00">01:00</option>
+<option value="01:15">01:15</option>
+<option value="01:30">01:30</option>
+<option value="01:45">01:45</option>
+<option value="02:00">02:00</option>
+<option value="02:15">02:15</option>
+<option value="02:30">02:30</option>
+<option value="02:45">02:45</option>
+<option value="03:00">03:00</option>
+<option value="03:15">03:15</option>
+<option value="03:30">03:30</option>
+<option value="03:45">03:45</option>
+<option value="04:00">04:00</option>
+<option value="04:15">04:15</option>
+<option value="04:30">04:30</option>
+<option value="04:45">04:45</option>
+<option value="05:00">05:00</option>
+<option value="05:15">05:15</option>
+<option value="05:30">05:30</option>
+<option value="05:45">05:45</option>
+<option value="06:00">06:00</option>
+<option value="06:15">06:15</option>
+<option value="06:30">06:30</option>
+<option value="06:45">06:45</option>
+<option value="07:00">07:00</option>
+<option value="07:15">07:15</option>
+<option value="07:30">07:30</option>
+<option value="07:45">07:45</option>
+<option value="08:00">08:00</option>
+<option value="08:15">08:15</option>
+<option value="08:30">08:30</option>
+<option value="08:45">08:45</option>
+<option value="09:00">09:00</option>
+<option value="09:15">09:15</option>
+<option value="09:30">09:30</option>
+<option value="09:45">09:45</option>
+<option value="10:00">10:00</option>
+<option value="10:15">10:15</option>
+<option value="10:30">10:30</option>
+<option value="10:45">10:45</option>
+<option value="11:00">11:00</option>
+<option value="11:15">11:15</option>
+<option value="11:30">11:30</option>
+<option value="11:45">11:45</option>
+<option value="12:00">12:00</option>
+<option value="12:15">12:15</option>
+<option value="12:30">12:30</option>
+<option value="12:45">12:45</option>
+<option value="13:00">13:00</option>
+<option value="13:15">13:15</option>
+<option value="13:30">13:30</option>
+<option value="13:45">13:45</option>
+<option value="14:00">14:00</option>
+<option value="14:15">14:15</option>
+<option value="14:30">14:30</option>
+<option value="14:45">14:45</option>
+<option value="15:00">15:00</option>
+<option value="15:15">15:15</option>
+<option value="15:30">15:30</option>
+<option value="15:45">15:45</option>
+<option value="16:00">16:00</option>
+<option value="16:15">16:15</option>
+<option value="16:30">16:30</option>
+<option value="16:45">16:45</option>
+<option value="17:00">17:00</option>
+<option value="17:15">17:15</option>
+<option value="17:30">17:30</option>
+<option value="17:45">17:45</option>
+<option value="18:00">18:00</option>
+<option value="18:15">18:15</option>
+<option value="18:30">18:30</option>
+<option value="18:45">18:45</option>
+<option value="19:00">19:00</option>
+<option value="19:15">19:15</option>
+<option value="19:30">19:30</option>
+<option value="19:45">19:45</option>
+<option value="20:00">20:00</option>
+<option value="20:15">20:15</option>
+<option value="20:30">20:30</option>
+<option value="20:45">20:45</option>
+<option value="21:00">21:00</option>
+<option value="21:15">21:15</option>
+<option value="21:30">21:30</option>
+<option value="21:45">21:45</option>
+<option value="22:00">22:00</option>
+<option value="22:15">22:15</option>
+<option value="22:30">22:30</option>
+<option value="22:45">22:45</option>
+<option value="23:00">23:00</option>
+<option value="23:15">23:15</option>
+<option value="23:30">23:30</option>
+<option value="23:45">23:45</option></select></div>
+          <div class="form-field schedule-field"><label for="fim">Horário de término</label><select id="fim" name="fim" class="time-select"><option value="">Selecione</option>
+<option value="00:00">00:00</option>
+<option value="00:15">00:15</option>
+<option value="00:30">00:30</option>
+<option value="00:45">00:45</option>
+<option value="01:00">01:00</option>
+<option value="01:15">01:15</option>
+<option value="01:30">01:30</option>
+<option value="01:45">01:45</option>
+<option value="02:00">02:00</option>
+<option value="02:15">02:15</option>
+<option value="02:30">02:30</option>
+<option value="02:45">02:45</option>
+<option value="03:00">03:00</option>
+<option value="03:15">03:15</option>
+<option value="03:30">03:30</option>
+<option value="03:45">03:45</option>
+<option value="04:00">04:00</option>
+<option value="04:15">04:15</option>
+<option value="04:30">04:30</option>
+<option value="04:45">04:45</option>
+<option value="05:00">05:00</option>
+<option value="05:15">05:15</option>
+<option value="05:30">05:30</option>
+<option value="05:45">05:45</option>
+<option value="06:00">06:00</option>
+<option value="06:15">06:15</option>
+<option value="06:30">06:30</option>
+<option value="06:45">06:45</option>
+<option value="07:00">07:00</option>
+<option value="07:15">07:15</option>
+<option value="07:30">07:30</option>
+<option value="07:45">07:45</option>
+<option value="08:00">08:00</option>
+<option value="08:15">08:15</option>
+<option value="08:30">08:30</option>
+<option value="08:45">08:45</option>
+<option value="09:00">09:00</option>
+<option value="09:15">09:15</option>
+<option value="09:30">09:30</option>
+<option value="09:45">09:45</option>
+<option value="10:00">10:00</option>
+<option value="10:15">10:15</option>
+<option value="10:30">10:30</option>
+<option value="10:45">10:45</option>
+<option value="11:00">11:00</option>
+<option value="11:15">11:15</option>
+<option value="11:30">11:30</option>
+<option value="11:45">11:45</option>
+<option value="12:00">12:00</option>
+<option value="12:15">12:15</option>
+<option value="12:30">12:30</option>
+<option value="12:45">12:45</option>
+<option value="13:00">13:00</option>
+<option value="13:15">13:15</option>
+<option value="13:30">13:30</option>
+<option value="13:45">13:45</option>
+<option value="14:00">14:00</option>
+<option value="14:15">14:15</option>
+<option value="14:30">14:30</option>
+<option value="14:45">14:45</option>
+<option value="15:00">15:00</option>
+<option value="15:15">15:15</option>
+<option value="15:30">15:30</option>
+<option value="15:45">15:45</option>
+<option value="16:00">16:00</option>
+<option value="16:15">16:15</option>
+<option value="16:30">16:30</option>
+<option value="16:45">16:45</option>
+<option value="17:00">17:00</option>
+<option value="17:15">17:15</option>
+<option value="17:30">17:30</option>
+<option value="17:45">17:45</option>
+<option value="18:00">18:00</option>
+<option value="18:15">18:15</option>
+<option value="18:30">18:30</option>
+<option value="18:45">18:45</option>
+<option value="19:00">19:00</option>
+<option value="19:15">19:15</option>
+<option value="19:30">19:30</option>
+<option value="19:45">19:45</option>
+<option value="20:00">20:00</option>
+<option value="20:15">20:15</option>
+<option value="20:30">20:30</option>
+<option value="20:45">20:45</option>
+<option value="21:00">21:00</option>
+<option value="21:15">21:15</option>
+<option value="21:30">21:30</option>
+<option value="21:45">21:45</option>
+<option value="22:00">22:00</option>
+<option value="22:15">22:15</option>
+<option value="22:30">22:30</option>
+<option value="22:45">22:45</option>
+<option value="23:00">23:00</option>
+<option value="23:15">23:15</option>
+<option value="23:30">23:30</option>
+<option value="23:45">23:45</option></select></div>
           <div class="form-field full"><label for="estrutura">Que estrutura ou experiência você imagina?</label><textarea id="estrutura" name="estrutura" placeholder="Café, máquinas, métodos, equipe, serviço, espaço disponível e outras necessidades."></textarea></div>
           <div class="form-field full"><label for="objetivo">Qual é o objetivo ou momento mais importante desse evento?</label><textarea id="objetivo" name="objetivo" placeholder="Ex.: receber clientes, lançamento, confraternização, feira, experiência de marca, camarote, workshop..."></textarea></div>
           <div class="form-field full"><label for="observacoes">Outras informações</label><textarea id="observacoes" name="observacoes"></textarea></div>
         </div>
-        <div class="form-note"><strong>Envio pelo WhatsApp:</strong> ao tocar no botão, os dados preenchidos serão organizados automaticamente em uma mensagem para a Rafa Palma.</div>
+        <div class="form-note"><strong>Envio pelo WhatsApp:</strong> ao tocar no botão, os dados preenchidos serão organizados automaticamente em uma mensagem para nossa equipe pelo WhatsApp.</div>
         <button class="btn btn-primary budget-submit" type="submit">Enviar solicitação pelo WhatsApp</button>
       </form>
     </div>
   </main>
 
-<script id="v40-budget-whatsapp">
+<script id="v41-budget-whatsapp">
 (function(){
-  const form = document.getElementById('budgetForm');
-  const dataInput = document.getElementById('data');
+  var form = document.getElementById('budgetForm');
+  var data = document.getElementById('data');
 
-  if (dataInput) {
-    const hoje = new Date();
-    const local = new Date(hoje.getTime() - hoje.getTimezoneOffset() * 60000)
-      .toISOString().slice(0,10);
-    dataInput.min = local;
+  if(data){
+    var d = new Date();
+    var local = new Date(d.getTime() - d.getTimezoneOffset()*60000).toISOString().slice(0,10);
+    data.min = local;
   }
 
-  function valor(id){
-    const el = document.getElementById(id);
-    return el ? el.value.trim() : '';
+  function v(id){
+    var el=document.getElementById(id);
+    return el && el.value ? el.value.trim() : '';
   }
-
-  function dataBR(v){
-    if(!v) return '';
-    const [a,m,d] = v.split('-');
-    return `${d}/${m}/${a}`;
+  function brDate(x){
+    if(!x) return '';
+    var a=x.split('-');
+    return a.length===3 ? a[2]+'/'+a[1]+'/'+a[0] : x;
   }
 
   if(form){
     form.addEventListener('submit', function(e){
       e.preventDefault();
 
-      const linhas = [
-        'Olá, Rafa Palma! Gostaria de solicitar um orçamento.',
+      var linhas = [
+        'Olá! Gostaria de solicitar um orçamento Rafa Palma.',
         '',
-        valor('nome') ? `Responsável: ${valor('nome')}` : '',
-        valor('empresa') ? `Empresa/organização: ${valor('empresa')}` : '',
-        valor('telefone') ? `Telefone/WhatsApp: ${valor('telefone')}` : '',
-        valor('email') ? `E-mail: ${valor('email')}` : '',
-        valor('tipo') ? `Tipo de experiência: ${valor('tipo')}` : '',
-        valor('cidade') ? `Cidade/UF: ${valor('cidade')}` : '',
-        valor('data') ? `Data do evento: ${dataBR(valor('data'))}` : '',
-        valor('inicio') ? `Horário de início: ${valor('inicio')}` : '',
-        valor('fim') ? `Horário de término: ${valor('fim')}` : '',
-        valor('publico') ? `Público estimado: ${valor('publico')} pessoas` : '',
-        '',
-        valor('estrutura') ? `Estrutura/experiência desejada:\n${valor('estrutura')}` : '',
-        valor('objetivo') ? `Objetivo/momento principal:\n${valor('objetivo')}` : '',
-        valor('observacoes') ? `Outras informações:\n${valor('observacoes')}` : ''
-      ].filter(Boolean);
+        v('nome') ? 'Responsável: '+v('nome') : '',
+        v('empresa') ? 'Empresa / organização: '+v('empresa') : '',
+        v('telefone') ? 'Telefone / WhatsApp: '+v('telefone') : '',
+        v('email') ? 'E-mail: '+v('email') : '',
+        v('tipo') ? 'Tipo de solicitação: '+v('tipo') : '',
+        v('cidade') ? 'Cidade / UF: '+v('cidade') : '',
+        v('data') ? 'Data: '+brDate(v('data')) : '',
+        v('inicio') ? 'Início: '+v('inicio') : '',
+        v('fim') ? 'Término: '+v('fim') : '',
+        v('publico') ? 'Público estimado: '+v('publico')+' pessoas' : '',
+        v('estrutura') ? '\nEstrutura / experiência desejada:\n'+v('estrutura') : '',
+        v('objetivo') ? '\nObjetivo:\n'+v('objetivo') : '',
+        v('observacoes') ? '\nObservações:\n'+v('observacoes') : ''
+      ].filter(function(x){return x!=='';});
 
-      const texto = linhas.join('\n');
-      const url = 'https://wa.me/5555991128100?text=' + encodeURIComponent(texto);
-      window.open(url, '_blank', 'noopener');
+      var texto = linhas.join('\n');
+      var whatsapp = 'https://wa.me/5555991128100?text=' + encodeURIComponent(texto);
+
+      // Navegação na mesma aba funciona melhor em navegadores internos
+      window.location.href = whatsapp;
+      return false;
     });
   }
 })();
