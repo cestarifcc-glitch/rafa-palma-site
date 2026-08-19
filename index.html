@@ -946,6 +946,53 @@ html{scroll-behavior:smooth;}
 }
 </style>
 
+
+<style id="v58-company-machines-mobile">
+@media (max-width:560px){
+
+  /* V58 — somente seção Máquinas Rafa Palma / empresas */
+
+  /* Remove o pequeno círculo decorativo dessa seção */
+  .company .dot,
+  .company .circle,
+  .companies .dot,
+  .companies .circle,
+  .company-grid-v5 .dot,
+  .company-grid-v5 .circle{
+    display:none !important;
+  }
+
+  /* Mais respiro entre o card principal e os três diferenciais */
+  .company-grid-v5{
+    gap:24px !important;
+  }
+
+  /* Diferenciais mais legíveis sem virar novos botões */
+  .company-grid-v5 .features,
+  .company-grid-v5 .benefits,
+  .company-features{
+    gap:12px !important;
+    margin-top:22px !important;
+  }
+
+  .company-grid-v5 .features > *,
+  .company-grid-v5 .benefits > *,
+  .company-features > *{
+    font-size:14px !important;
+    line-height:1.3 !important;
+    padding-top:5px !important;
+    padding-bottom:5px !important;
+  }
+
+  /* Mantém o CTA separado visualmente dos diferenciais */
+  .company-grid-v5 .btn,
+  .company .btn,
+  .companies .btn{
+    margin-top:20px !important;
+  }
+}
+</style>
+
 </head>
 <body id="inicio">
   <header class="site-header" id="inicio">
