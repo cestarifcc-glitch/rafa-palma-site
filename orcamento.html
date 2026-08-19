@@ -824,21 +824,21 @@ textarea:focus {
       e.preventDefault();
 
       var linhas = [
-        'Olá! Gostaria de solicitar um orçamento Rafa Palma.',
+        '*SOLICITAÇÃO DE ORÇAMENTO — RAFA PALMA*',
         '',
-        v('nome') ? 'Responsável: '+v('nome') : '',
-        v('empresa') ? 'Empresa / organização: '+v('empresa') : '',
-        v('telefone') ? 'Telefone / WhatsApp: '+v('telefone') : '',
-        v('email') ? 'E-mail: '+v('email') : '',
-        v('tipo') ? 'Tipo de solicitação: '+v('tipo') : '',
-        v('cidade') ? 'Cidade / UF: '+v('cidade') : '',
-        v('data') ? 'Data: '+brDate(v('data')) : '',
-        v('inicio') ? 'Início: '+v('inicio') : '',
-        v('fim') ? 'Término: '+v('fim') : '',
-        v('publico') ? 'Público estimado: '+v('publico')+' pessoas' : '',
-        v('estrutura') ? '\nEstrutura / experiência desejada:\n'+v('estrutura') : '',
-        v('objetivo') ? '\nObjetivo:\n'+v('objetivo') : '',
-        v('observacoes') ? '\nObservações:\n'+v('observacoes') : ''
+        v('nome') ? '*Responsável:* '+v('nome') : '',
+        v('empresa') ? '*Empresa / organização:* '+v('empresa') : '',
+        v('telefone') ? '*Telefone / WhatsApp:* '+v('telefone') : '',
+        v('email') ? '*E-mail:* '+v('email') : '',
+        v('tipo') ? '*Tipo de solicitação:* '+v('tipo') : '',
+        v('cidade') ? '*Cidade / UF:* '+v('cidade') : '',
+        v('data') ? '*Data:* '+brDate(v('data')) : '',
+        v('inicio') ? '*Início:* '+v('inicio') : '',
+        v('fim') ? '*Término:* '+v('fim') : '',
+        v('publico') ? '*Público estimado:* '+v('publico')+' pessoas' : '',
+        v('estrutura') ? '\n*Estrutura / experiência desejada:*\n'+v('estrutura') : '',
+        v('objetivo') ? '\n*Objetivo:*\n'+v('objetivo') : '',
+        v('observacoes') ? '\n*Observações:*\n'+v('observacoes') : ''
       ].filter(function(x){return x!=='';});
 
       var texto = linhas.join('\n');
