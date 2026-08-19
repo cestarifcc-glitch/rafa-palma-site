@@ -1,10 +1,11 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-    <meta name="color-scheme" content="light only">
-    <meta name="supported-color-schemes" content="light">
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+  
+<meta name="color-scheme" content="only light">
+<meta name="supported-color-schemes" content="light">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#151515" />
   <meta name="description" content="Solicite um orçamento Rafa Palma para seu evento, empresa ou experiência com café." />
   <title>Orçamento — Rafa Palma</title>
@@ -549,6 +550,47 @@ textarea:focus {
   background:#fffdfa !important;
   color:#171310 !important;
   -webkit-text-fill-color:#171310 !important;
+}
+</style>
+
+
+<style id="v48-force-light-rendering">
+/* V48 — força a renderização na paleta clara original da marca */
+:root{
+  color-scheme: only light !important;
+  supported-color-schemes: light !important;
+}
+
+html{
+  color-scheme: only light !important;
+  background:#ffffff !important;
+}
+
+body{
+  color-scheme: only light !important;
+}
+
+/* Evita que controles nativos assumam aparência escura */
+input,
+select,
+textarea,
+button{
+  color-scheme: light !important;
+}
+
+/* Preserva a paleta declarada pelo site mesmo quando o aparelho está em modo escuro */
+@media (prefers-color-scheme: dark){
+  :root,
+  html,
+  body{
+    color-scheme: only light !important;
+  }
+}
+
+/* Reduz interferência de ajustes automáticos do navegador */
+html, body, main, section, header, footer,
+a, button, input, select, textarea, svg, path, circle{
+  forced-color-adjust:none;
 }
 </style>
 
