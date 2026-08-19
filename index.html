@@ -503,65 +503,73 @@ footer a:active{
 }
 </style>
 
-<style id="v36-cup-css-definitive">
-/* V36 — xícara desenhada 100% em CSS, sem SVG, PNG, fonte ou emoji */
-.experience .feature-grid span:nth-child(4){
+<style id="v37-cup-aligned">
+/* V37 — xícara com traço forte e alinhamento com Conexão */
+.experience .feature-grid > span:nth-child(4){
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  justify-content:flex-start !important;
   text-align:center !important;
 }
 
-/* garante que restos de tentativas antigas não apareçam */
-.experience .feature-grid span:nth-child(4) b,
-.experience .feature-grid span:nth-child(4) .rp-cup-icon{
+.experience .feature-grid > span:nth-child(3),
+.experience .feature-grid > span:nth-child(4){
+  align-self:start !important;
+}
+
+/* remove qualquer resíduo de tentativas anteriores */
+.experience .feature-grid > span:nth-child(4) .rp-cup-icon,
+.experience .feature-grid > span:nth-child(4) svg.rp-cup-svg,
+.experience .feature-grid > span:nth-child(4) .rp-final-cup{
   display:none !important;
 }
 
-.experience .feature-grid span:nth-child(4) .rp-css-cup{
+.experience .feature-grid > span:nth-child(4) .rp-css-cup{
   display:block !important;
   position:relative !important;
-  width:22px !important;
-  height:13px !important;
-  margin:2px auto 11px !important;
-  border:2px solid #964430 !important;
-  border-top:2px solid #964430 !important;
-  border-radius:2px 2px 7px 7px !important;
+  width:30px !important;
+  height:18px !important;
+  margin:0 auto 14px !important;
+  border:4px solid #9b4029 !important;
+  border-top:4px solid #9b4029 !important;
+  border-radius:2px 2px 10px 10px !important;
   box-sizing:border-box !important;
   background:transparent !important;
-  color:transparent !important;
-  font-size:0 !important;
-  line-height:0 !important;
   opacity:1 !important;
   filter:none !important;
   transform:none !important;
-  -webkit-text-fill-color:transparent !important;
+  font-size:0 !important;
+  line-height:0 !important;
 }
 
 /* alça */
-.experience .feature-grid span:nth-child(4) .rp-css-cup::after{
+.experience .feature-grid > span:nth-child(4) .rp-css-cup::after{
   content:"" !important;
   display:block !important;
   position:absolute !important;
-  width:7px !important;
-  height:8px !important;
-  right:-7px !important;
+  width:10px !important;
+  height:11px !important;
+  right:-10px !important;
   top:1px !important;
-  border:2px solid #964430 !important;
+  border:4px solid #9b4029 !important;
   border-left:0 !important;
-  border-radius:0 7px 7px 0 !important;
+  border-radius:0 8px 8px 0 !important;
   box-sizing:border-box !important;
   background:transparent !important;
 }
 
-/* pires discreto */
-.experience .feature-grid span:nth-child(4) .rp-css-cup::before{
+/* pires */
+.experience .feature-grid > span:nth-child(4) .rp-css-cup::before{
   content:"" !important;
   display:block !important;
   position:absolute !important;
-  width:26px !important;
-  height:2px !important;
-  left:-4px !important;
-  bottom:-6px !important;
-  background:#964430 !important;
-  border-radius:2px !important;
+  width:38px !important;
+  height:4px !important;
+  left:-6px !important;
+  bottom:-10px !important;
+  background:#9b4029 !important;
+  border-radius:4px !important;
 }
 </style>
 
