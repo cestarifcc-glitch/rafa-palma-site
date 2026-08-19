@@ -649,6 +649,134 @@ footer a:active{
 }
 </style>
 
+
+<style id="v45-mobile-refinement">
+/* V45 — acabamento geral do mobile, sem alterar conteúdo ou funcionalidades */
+@media (max-width:560px){
+
+  /* Ritmo geral das seções */
+  section{
+    scroll-margin-top:76px !important;
+  }
+
+  .section-dark,
+  .section-cream{
+    padding-top:40px !important;
+    padding-bottom:40px !important;
+  }
+
+  /* Blocos divididos: menos áreas vazias entre imagem e texto */
+  .split{
+    min-height:0 !important;
+    height:auto !important;
+  }
+
+  .split .copy{
+    min-height:0 !important;
+    padding-top:34px !important;
+    padding-bottom:34px !important;
+  }
+
+  .split .media{
+    min-height:0 !important;
+  }
+
+  /* Cabeçalhos das seções */
+  .section-head{
+    margin-bottom:24px !important;
+  }
+
+  .section-head h2{
+    margin-bottom:10px !important;
+  }
+
+  .eyebrow{
+    margin-bottom:10px !important;
+  }
+
+  /* Brasil / eventos: cards mais regulares */
+  .event-grid{
+    gap:20px !important;
+  }
+
+  .event-card{
+    margin:0 !important;
+  }
+
+  .event-card .event-copy,
+  .event-card .copy{
+    padding-top:18px !important;
+    padding-bottom:20px !important;
+  }
+
+  /* Quem é Rafa Palma */
+  .about .copy{
+    padding-top:32px !important;
+    padding-bottom:36px !important;
+  }
+
+  .about .copy p{
+    margin-bottom:14px !important;
+  }
+
+  /* Café / produtos */
+  .coffee-grid{
+    gap:20px !important;
+  }
+
+  .coffee-grid .btn,
+  .coffee-grid a.btn{
+    margin-top:14px !important;
+  }
+
+  /* Máquinas: mais respiro e melhor separação visual */
+  .company-grid-v5{
+    gap:18px !important;
+  }
+
+  .company-grid-v5 > *{
+    min-width:0 !important;
+  }
+
+  .company-grid-v5 .btn{
+    margin-top:14px !important;
+  }
+
+  /* Workshops / conhecimento */
+  .workshops-grid{
+    gap:20px !important;
+  }
+
+  /* Evita margens acumuladas no fim dos blocos */
+  .copy > *:last-child,
+  .section-head > *:last-child{
+    margin-bottom:0 !important;
+  }
+
+  /* CTAs mais consistentes no celular */
+  .btn{
+    min-height:48px !important;
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    line-height:1.15 !important;
+  }
+
+  /* Mantém o conjunto de ícones V38 intacto; só regula o espaço ao redor */
+  .experience .feature-grid{
+    margin-top:24px !important;
+    margin-bottom:0 !important;
+  }
+
+  /* Proteção final contra overflow */
+  body,
+  main,
+  section{
+    overflow-x:hidden !important;
+  }
+}
+</style>
+
 </head>
 <body>
   <header class="site-header" id="inicio">
