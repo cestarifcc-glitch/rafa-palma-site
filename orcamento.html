@@ -13,10 +13,9 @@
   <link rel="stylesheet" href="styles.css" />
   <style>
     .budget-page{min-height:100vh;background:var(--paper);color:var(--ink);padding:130px 0 80px}
-    .budget-shell{display:grid;grid-template-columns:.9fr 1.1fr;gap:55px;align-items:start}
+    .budget-shell{display:grid;grid-template-columns:.8fr 1.2fr;gap:55px;align-items:start}
     .budget-intro{position:sticky;top:115px}
-    .budget-intro h1{font-size:clamp(46px,4.3vw,62px);line-height:.95;margin:14px 0 24px}
-    .desktop-title-line{white-space:nowrap}
+    .budget-intro h1{font-size:clamp(46px,5vw,72px);line-height:.95;margin:14px 0 24px}
     .budget-intro .script{font-size:28px}
     .budget-intro p:not(.eyebrow):not(.script){font-size:17px;max-width:500px}
     .budget-form{background:#fff;border:1px solid #e0d4c7;border-radius:18px;padding:34px;box-shadow:0 18px 50px rgba(52,35,24,.08)}
@@ -35,7 +34,6 @@
     .desktop-title-break{display:block}
     @media(max-width:800px){
       .desktop-title-break{display:none}
-      .desktop-title-line{white-space:normal}
       .budget-page{padding-top:100px}
       .budget-shell{grid-template-columns:1fr;gap:30px}
       .budget-intro{position:static}
@@ -598,6 +596,21 @@ a, button, input, select, textarea, svg, path, circle{
 }
 </style>
 
+
+<style id="v62-budget-title-color-fix">
+@media (min-width:801px){
+  .budget-intro h1{
+    color:#151515 !important;
+    -webkit-text-fill-color:#151515 !important;
+    background:none !important;
+    background-image:none !important;
+    -webkit-background-clip:border-box !important;
+    background-clip:border-box !important;
+    opacity:1 !important;
+  }
+}
+</style>
+
 </head>
 <body>
   <header class="site-header">
@@ -611,7 +624,7 @@ a, button, input, select, textarea, svg, path, circle{
     <div class="container budget-shell">
       <section class="budget-intro">
         <p class="eyebrow dark">Orçamento Rafa Palma</p>
-        <h1><span class="desktop-title-line">Conte-nos sobre a sua</span><br class="desktop-title-break">necessidade.</h1>
+        <h1>Conte-nos sobre a sua<br class="desktop-title-break">necessidade.</h1>
         <p class="script">Quanto mais detalhes, mais ágil e precisa será a proposta.</p>
         <p>Preencha os dados e envie sua solicitação pelo WhatsApp.</p>
         <a class="back-link" href="index.html">← Voltar para o site</a>
