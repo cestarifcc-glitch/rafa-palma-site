@@ -650,38 +650,197 @@ footer a:active{
 </style>
 
 
-<style id="v46-safe-mobile-spacing">
+<style id="v47-mobile-palette-definitive">
+/* V47 — paleta mobile definitiva.
+   Neutraliza as antigas técnicas com imagens/background-clip que o Samsung
+   estava exibindo em cinza/salmão. Não altera layout. */
 @media (max-width:560px){
 
-  /* Experiência */
-  .experience .feature-grid{
-    margin-top:24px !important;
+  /* Áreas claras */
+  .panel-light,
+  .experience .copy,
+  .brazil .copy,
+  .about .copy,
+  .affection .copy{
+    background:#f6efe7 !important;
+    background-image:none !important;
+    color:#151515 !important;
+    forced-color-adjust:none !important;
   }
 
-  /* Quem é Rafa Palma */
-  .about .copy{
-    padding-top:32px !important;
-    padding-bottom:34px !important;
+  .section-cream,
+  .workshops.section-cream,
+  .coffee-shop.section-cream{
+    background:#E8DBCB !important;
+    background-image:none !important;
+    color:#151515 !important;
+    forced-color-adjust:none !important;
   }
 
-  /* Cards de eventos */
-  .event-grid{
-    gap:20px !important;
+  /* Texto principal em áreas claras */
+  .panel-light h1,
+  .panel-light h2,
+  .panel-light h3,
+  .panel-light p:not(.eyebrow):not(.script),
+  .panel-light strong,
+  .panel-light .feature-grid > span,
+  .section-cream h1,
+  .section-cream h2,
+  .section-cream h3,
+  .section-cream p:not(.eyebrow):not(.script),
+  .section-cream strong,
+  .coffee-shop h1,
+  .coffee-shop h2,
+  .coffee-shop h3,
+  .coffee-shop p:not(.eyebrow):not(.script){
+    color:#151515 !important;
+    -webkit-text-fill-color:#151515 !important;
+    background:none !important;
+    background-image:none !important;
+    -webkit-background-clip:border-box !important;
+    background-clip:border-box !important;
+    opacity:1 !important;
   }
 
-  /* Máquinas / empresas */
-  .company-grid-v5{
-    gap:18px !important;
+  /* Marrom da identidade */
+  .panel-light .eyebrow.dark,
+  .panel-light .script,
+  .panel-light h2 em,
+  .section-cream .eyebrow.dark,
+  .section-cream .script,
+  .section-cream h2 em,
+  .coffee-shop .eyebrow.dark,
+  .coffee-shop .script,
+  .coffee-shop h2 em,
+  .brazil .eyebrow.dark,
+  .about .eyebrow.dark,
+  .workshops .eyebrow.dark,
+  .routes,
+  .reach,
+  .reach span,
+  .reach strong,
+  .workshop-tags{
+    color:#964430 !important;
+    -webkit-text-fill-color:#964430 !important;
+    background:none !important;
+    background-image:none !important;
+    -webkit-background-clip:border-box !important;
+    background-clip:border-box !important;
+    opacity:1 !important;
   }
 
-  /* Workshops */
-  .workshops-grid{
-    gap:20px !important;
+  /* Citação Quem é */
+  .about blockquote,
+  .about blockquote *{
+    color:#5b4a3d !important;
+    -webkit-text-fill-color:#5b4a3d !important;
+    background:none !important;
+    background-image:none !important;
+    -webkit-background-clip:border-box !important;
+    background-clip:border-box !important;
+    opacity:1 !important;
+  }
+  .about blockquote{
+    border-left-color:#964430 !important;
   }
 
-  /* Café / produtos */
-  .coffee-grid{
-    gap:20px !important;
+  /* Conjunto de quatro ícones */
+  .experience .feature-grid .rp-feature-icon,
+  .experience .feature-grid .rp-feature-icon *{
+    background:none !important;
+    background-image:none !important;
+    -webkit-background-clip:border-box !important;
+    background-clip:border-box !important;
+  }
+  .experience .feature-grid .rp-feature-icon svg{
+    stroke:#964430 !important;
+    fill:none !important;
+    color:#964430 !important;
+    opacity:1 !important;
+  }
+  .experience .feature-grid > span{
+    color:#151515 !important;
+    -webkit-text-fill-color:#151515 !important;
+    background:none !important;
+    background-image:none !important;
+  }
+  .experience .feature-grid > span small{
+    color:#6e6258 !important;
+    -webkit-text-fill-color:#6e6258 !important;
+    background:none !important;
+    background-image:none !important;
+    -webkit-background-clip:border-box !important;
+    background-clip:border-box !important;
+  }
+
+  /* Selos claros */
+  .coffee-benefits span,
+  .routes span{
+    background:#eadfd3 !important;
+    background-image:none !important;
+    color:#964430 !important;
+    -webkit-text-fill-color:#964430 !important;
+  }
+
+  /* Dourado da marca */
+  .btn-primary,
+  .btn-primary:link,
+  .btn-primary:visited,
+  .btn-primary:hover,
+  .btn-primary:active,
+  .whatsapp-float,
+  .whatsapp-float:link,
+  .whatsapp-float:visited,
+  .whatsapp-float:hover,
+  .whatsapp-float:active{
+    background:#c99337 !important;
+    background-image:none !important;
+    color:#17110b !important;
+    -webkit-text-fill-color:#17110b !important;
+    forced-color-adjust:none !important;
+  }
+
+  /* Rodapé: contatos off-white, sem amarelo de link visitado */
+  footer .footer-grid small{
+    color:#9f9286 !important;
+    -webkit-text-fill-color:#9f9286 !important;
+  }
+  footer .footer-grid a,
+  footer .footer-grid a:link,
+  footer .footer-grid a:visited,
+  footer .footer-grid a:hover,
+  footer .footer-grid a:active,
+  footer .footer-grid span{
+    color:#f1e6d8 !important;
+    -webkit-text-fill-color:#f1e6d8 !important;
+    background:none !important;
+    background-image:none !important;
+    -webkit-background-clip:border-box !important;
+    background-clip:border-box !important;
+    opacity:1 !important;
+  }
+
+  .footer-bottom{
+    color:#b9afa6 !important;
+    -webkit-text-fill-color:#b9afa6 !important;
+  }
+}
+
+/* Se o aparelho estiver em modo escuro, manter exatamente a mesma paleta acima. */
+@media (prefers-color-scheme:dark) and (max-width:560px){
+  .panel-light,
+  .experience .copy,
+  .brazil .copy,
+  .about .copy,
+  .affection .copy{
+    background:#f6efe7 !important;
+    background-image:none !important;
+  }
+  .section-cream,
+  .workshops.section-cream,
+  .coffee-shop.section-cream{
+    background:#E8DBCB !important;
+    background-image:none !important;
   }
 }
 </style>
