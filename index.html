@@ -563,6 +563,92 @@ footer a:active{
 }
 </style>
 
+
+<style id="v39-mobile-cleanup">
+@media (max-width:560px){
+
+  /* Proteção geral contra qualquer estouro lateral */
+  html, body{
+    width:100% !important;
+    max-width:100% !important;
+    overflow-x:hidden !important;
+  }
+  main, section, header, footer,
+  .container, .split, .copy, .media,
+  .section-head, .event-grid, .company-grid-v5,
+  .coffee-grid, .workshops-grid, .roasting-grid{
+    min-width:0 !important;
+    max-width:100% !important;
+  }
+  img, video, iframe{
+    max-width:100% !important;
+  }
+
+  /* Ritmo vertical mais consistente no mobile */
+  .experience .copy,
+  .brazil .copy,
+  .about .copy,
+  .affection .copy{
+    min-height:0 !important;
+    padding-top:38px !important;
+    padding-bottom:38px !important;
+  }
+
+  .section-dark,
+  .section-cream{
+    padding-top:44px !important;
+    padding-bottom:44px !important;
+  }
+
+  /* Experiência: reduz um pouco o vazio entre texto e ícones.
+     Não altera o desenho/tamanho dos quatro ícones da V38. */
+  .experience .feature-grid{
+    margin-top:26px !important;
+    row-gap:36px !important;
+  }
+
+  /* Títulos marrons que o Samsung Internet vinha alterando */
+  .brazil .eyebrow.dark,
+  .about .eyebrow.dark,
+  .workshops .eyebrow.dark{
+    color:transparent !important;
+    -webkit-text-fill-color:transparent !important;
+    background-color:transparent !important;
+    background-image:url('assets/images/brown-fill-mobile.png') !important;
+    background-repeat:repeat !important;
+    -webkit-background-clip:text !important;
+    background-clip:text !important;
+    opacity:1 !important;
+  }
+
+  /* Evita alturas herdadas criando áreas vazias */
+  .experience.split,
+  .brazil.split,
+  .about.split,
+  .affection.split{
+    min-height:0 !important;
+    height:auto !important;
+  }
+
+  /* Espaçamentos internos padronizados */
+  .section-head{
+    margin-bottom:28px !important;
+  }
+  .workshops-grid{
+    gap:24px !important;
+  }
+  .company-grid-v5{
+    gap:14px !important;
+  }
+
+  /* Botões nunca podem ultrapassar a largura da tela */
+  .btn,
+  .nav-cta{
+    max-width:100% !important;
+  }
+}
+</style>
+
 </head>
 <body>
   <header class="site-header" id="inicio">
