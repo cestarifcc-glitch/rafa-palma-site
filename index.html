@@ -863,6 +863,45 @@ a, button, input, select, textarea, svg, path, circle{
 }
 </style>
 
+
+<style id="v55-sticky-mobile-header">
+@media (max-width:560px){
+  /* V55 — navegação mobile sempre acessível */
+  header{
+    position:sticky !important;
+    top:0 !important;
+    z-index:9990 !important;
+    width:100% !important;
+  }
+
+  header .nav{
+    transition:min-height .2s ease, padding .2s ease !important;
+  }
+
+  header.v55-scrolled .nav{
+    min-height:66px !important;
+    padding-top:7px !important;
+    padding-bottom:7px !important;
+  }
+
+  header.v55-scrolled .brand img,
+  header.v55-scrolled .logo img{
+    max-height:52px !important;
+    transition:max-height .2s ease !important;
+  }
+
+  /* O logo funciona como retorno ao início */
+  header .brand,
+  header .logo{
+    cursor:pointer !important;
+  }
+
+  html{
+    scroll-behavior:smooth !important;
+  }
+}
+</style>
+
 </head>
 <body>
   <header class="site-header" id="inicio">
@@ -1076,5 +1115,33 @@ footer .footer-contacts a {
 }
 
 </style>
+
+<script id="v55-mobile-header-script">
+(function(){
+  var header = document.querySelector('header');
+  if (!header) return;
+
+  function updateHeader(){
+    if (window.scrollY > 80) header.classList.add('v55-scrolled');
+    else header.classList.remove('v55-scrolled');
+  }
+  window.addEventListener('scroll', updateHeader, {passive:true});
+  updateHeader();
+
+  var logoLink = header.querySelector('.brand, .logo');
+  if (logoLink) {
+    logoLink.setAttribute('role','link');
+    logoLink.setAttribute('aria-label','Voltar ao início');
+    logoLink.addEventListener('click', function(e){
+      var anchor = logoLink.closest('a');
+      if (!anchor) {
+        e.preventDefault();
+        window.scrollTo({top:0, behavior:'smooth'});
+      }
+    });
+  }
+})();
+</script>
+
 </body>
 </html>
