@@ -607,3 +607,26 @@ img,video,svg,iframe{max-width:100%;}
 @supports not (overflow:clip){
   html,body{overflow-x:hidden!important;}
 }
+
+/* V67 — refinamento desktop da seção Empresas */
+@media (min-width:901px){
+  .companies .section-head{
+    display:block;
+    margin-bottom:34px;
+  }
+  .companies .section-head > div{
+    width:100%;
+  }
+  .companies .company-intro-band{
+    width:100%;
+    max-width:none;
+    margin:22px 0 0;
+    padding:24px 28px;
+  }
+  .companies .company-intro-band p:first-child{
+    max-width:980px;
+  }
+  .companies .company-intro-band p:last-child{
+    margin-top:14px;
+  }
+}
