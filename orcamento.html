@@ -416,6 +416,115 @@ textarea:focus {
 }
 </style>
 
+
+<style id="v40-budget-mobile-controls">
+/* Agenda do evento */
+.schedule-field input[type="date"],
+.schedule-field input[type="time"]{
+  min-height:54px !important;
+  padding:0 15px !important;
+  font-size:16px !important;
+  line-height:54px !important;
+  border:1px solid #bda99a !important;
+  border-radius:10px !important;
+  background:#fffdfa !important;
+  color:#171310 !important;
+  -webkit-text-fill-color:#171310 !important;
+  color-scheme:light !important;
+}
+
+.schedule-field input[type="date"]::-webkit-calendar-picker-indicator,
+.schedule-field input[type="time"]::-webkit-calendar-picker-indicator{
+  width:24px !important;
+  height:24px !important;
+  padding:8px !important;
+  margin-right:-5px !important;
+  cursor:pointer !important;
+  opacity:.82 !important;
+}
+
+.budget-submit{
+  min-height:54px !important;
+  opacity:1 !important;
+  cursor:pointer !important;
+  background:#6f321f !important;
+  color:#fff !important;
+  -webkit-text-fill-color:#fff !important;
+}
+
+@media(max-width:560px){
+  .budget-page{
+    padding-top:92px !important;
+    padding-bottom:45px !important;
+  }
+
+  .budget-shell{
+    gap:22px !important;
+  }
+
+  .budget-intro h1{
+    font-size:42px !important;
+    line-height:.98 !important;
+    margin-bottom:18px !important;
+  }
+
+  .budget-intro .script{
+    font-size:24px !important;
+  }
+
+  .budget-form{
+    padding:20px !important;
+    border-radius:14px !important;
+  }
+
+  .form-grid{
+    gap:16px !important;
+  }
+
+  .form-field{
+    gap:8px !important;
+  }
+
+  .form-field label{
+    font-size:14px !important;
+  }
+
+  .form-field input,
+  .form-field select{
+    min-height:52px !important;
+    font-size:16px !important;
+    padding:0 14px !important;
+  }
+
+  .form-field textarea{
+    min-height:115px !important;
+    font-size:16px !important;
+    padding:13px 14px !important;
+  }
+
+  .schedule-field input[type="date"],
+  .schedule-field input[type="time"]{
+    min-height:56px !important;
+    height:56px !important;
+    font-size:17px !important;
+    padding:0 14px !important;
+  }
+
+  .budget-submit{
+    min-height:56px !important;
+    font-size:16px !important;
+    border-radius:10px !important;
+    margin-top:20px !important;
+  }
+
+  .form-note{
+    margin-top:20px !important;
+    font-size:12.5px !important;
+    line-height:1.45 !important;
+  }
+}
+</style>
+
 </head>
 <body>
   <header class="site-header">
@@ -435,7 +544,7 @@ textarea:focus {
         <a class="back-link" href="index.html">← Voltar para o site</a>
       </section>
 
-      <form class="budget-form" onsubmit="return false;">
+      <form class="budget-form" id="budgetForm">
         <div class="form-grid">
           <div class="form-field"><label for="nome">Nome do responsável</label><input id="nome" name="nome" type="text"></div>
           <div class="form-field"><label for="empresa">Empresa / organização</label><input id="empresa" name="empresa" type="text"></div>
@@ -453,32 +562,76 @@ textarea:focus {
             </select>
           </div>
           <div class="form-field"><label for="cidade">Cidade / UF</label><input id="cidade" name="cidade" type="text"></div>
-          <div class="form-field"><label for="data">Data do evento</label><input id="data" name="data" type="date">
-<div class="field rp-time-field">
-  <label for="horario">Horário desejado</label>
-  <select id="horario" name="horario">
-    <option value="">Selecione um horário</option>
-    <option>07:00</option><option>07:30</option><option>08:00</option><option>08:30</option>
-    <option>09:00</option><option>09:30</option><option>10:00</option><option>10:30</option>
-    <option>11:00</option><option>11:30</option><option>12:00</option><option>12:30</option>
-    <option>13:00</option><option>13:30</option><option>14:00</option><option>14:30</option>
-    <option>15:00</option><option>15:30</option><option>16:00</option><option>16:30</option>
-    <option>17:00</option><option>17:30</option><option>18:00</option><option>18:30</option>
-    <option>19:00</option><option>19:30</option><option>20:00</option><option>20:30</option>
-    <option>21:00</option><option>21:30</option><option>22:00</option>
-  </select>
-</div></div>
+          <div class="form-field schedule-field">
+            <label for="data">Data do evento</label>
+            <input id="data" name="data" type="date">
+          </div>
           <div class="form-field"><label for="publico">Número estimado de pessoas</label><input id="publico" name="publico" type="number" min="1"></div>
-          <div class="form-field"><label for="inicio">Horário de início</label><input id="inicio" name="inicio" type="time"></div>
-          <div class="form-field"><label for="fim">Horário de término</label><input id="fim" name="fim" type="time"></div>
+          <div class="form-field schedule-field"><label for="inicio">Horário de início</label><input id="inicio" name="inicio" type="time" step="900"></div>
+          <div class="form-field schedule-field"><label for="fim">Horário de término</label><input id="fim" name="fim" type="time" step="900"></div>
           <div class="form-field full"><label for="estrutura">Que estrutura ou experiência você imagina?</label><textarea id="estrutura" name="estrutura" placeholder="Café, máquinas, métodos, equipe, serviço, espaço disponível e outras necessidades."></textarea></div>
           <div class="form-field full"><label for="objetivo">Qual é o objetivo ou momento mais importante desse evento?</label><textarea id="objetivo" name="objetivo" placeholder="Ex.: receber clientes, lançamento, confraternização, feira, experiência de marca, camarote, workshop..."></textarea></div>
           <div class="form-field full"><label for="observacoes">Outras informações</label><textarea id="observacoes" name="observacoes"></textarea></div>
         </div>
-        <div class="form-note"><strong>Configuração pendente:</strong> o questionário está desenhado, mas o envio ainda precisa ser conectado ao destino definitivo antes da publicação.</div>
-        <button class="btn btn-primary budget-submit" type="submit" disabled>Enviar solicitação</button>
+        <div class="form-note"><strong>Envio pelo WhatsApp:</strong> ao tocar no botão, os dados preenchidos serão organizados automaticamente em uma mensagem para a Rafa Palma.</div>
+        <button class="btn btn-primary budget-submit" type="submit">Enviar solicitação pelo WhatsApp</button>
       </form>
     </div>
   </main>
+
+<script id="v40-budget-whatsapp">
+(function(){
+  const form = document.getElementById('budgetForm');
+  const dataInput = document.getElementById('data');
+
+  if (dataInput) {
+    const hoje = new Date();
+    const local = new Date(hoje.getTime() - hoje.getTimezoneOffset() * 60000)
+      .toISOString().slice(0,10);
+    dataInput.min = local;
+  }
+
+  function valor(id){
+    const el = document.getElementById(id);
+    return el ? el.value.trim() : '';
+  }
+
+  function dataBR(v){
+    if(!v) return '';
+    const [a,m,d] = v.split('-');
+    return `${d}/${m}/${a}`;
+  }
+
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+
+      const linhas = [
+        'Olá, Rafa Palma! Gostaria de solicitar um orçamento.',
+        '',
+        valor('nome') ? `Responsável: ${valor('nome')}` : '',
+        valor('empresa') ? `Empresa/organização: ${valor('empresa')}` : '',
+        valor('telefone') ? `Telefone/WhatsApp: ${valor('telefone')}` : '',
+        valor('email') ? `E-mail: ${valor('email')}` : '',
+        valor('tipo') ? `Tipo de experiência: ${valor('tipo')}` : '',
+        valor('cidade') ? `Cidade/UF: ${valor('cidade')}` : '',
+        valor('data') ? `Data do evento: ${dataBR(valor('data'))}` : '',
+        valor('inicio') ? `Horário de início: ${valor('inicio')}` : '',
+        valor('fim') ? `Horário de término: ${valor('fim')}` : '',
+        valor('publico') ? `Público estimado: ${valor('publico')} pessoas` : '',
+        '',
+        valor('estrutura') ? `Estrutura/experiência desejada:\n${valor('estrutura')}` : '',
+        valor('objetivo') ? `Objetivo/momento principal:\n${valor('objetivo')}` : '',
+        valor('observacoes') ? `Outras informações:\n${valor('observacoes')}` : ''
+      ].filter(Boolean);
+
+      const texto = linhas.join('\n');
+      const url = 'https://wa.me/5555991128100?text=' + encodeURIComponent(texto);
+      window.open(url, '_blank', 'noopener');
+    });
+  }
+})();
+</script>
+
 </body>
 </html>
