@@ -716,6 +716,28 @@ a, button, input, select, textarea, svg, path, circle{
 }
 </style>
 
+
+<style id="v50-events-mobile-refinement">
+@media (max-width:560px){
+  /* V50 — somente a seção de experiências/eventos */
+
+  /* Equilibra a passagem do texto introdutório para o primeiro card */
+  .events .section-head,
+  .brazil .section-head{
+    margin-bottom:26px !important;
+  }
+
+  /* Remove apenas os pequenos círculos decorativos dos cards */
+  .event-card .dot,
+  .event-card .event-dot,
+  .event-card .circle,
+  .event-card .event-circle,
+  .event-card [aria-hidden="true"].dot{
+    display:none !important;
+  }
+}
+</style>
+
 </head>
 <body>
   <header class="site-header" id="inicio">
