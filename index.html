@@ -503,73 +503,63 @@ footer a:active{
 }
 </style>
 
-<style id="v37-cup-aligned">
-/* V37 — xícara com traço forte e alinhamento com Conexão */
-.experience .feature-grid > span:nth-child(4){
+<style id="v38-feature-icons-unified">
+/* V38 — os quatro ícones usam exatamente a mesma caixa, traço e alinhamento */
+.experience .feature-grid{
+  display:grid !important;
+  grid-template-columns:repeat(2, minmax(0,1fr)) !important;
+  column-gap:28px !important;
+  row-gap:42px !important;
+}
+
+.experience .feature-grid > span{
   display:flex !important;
   flex-direction:column !important;
   align-items:center !important;
   justify-content:flex-start !important;
   text-align:center !important;
+  margin:0 !important;
+  padding:0 !important;
 }
 
-.experience .feature-grid > span:nth-child(3),
-.experience .feature-grid > span:nth-child(4){
-  align-self:start !important;
-}
-
-/* remove qualquer resíduo de tentativas anteriores */
-.experience .feature-grid > span:nth-child(4) .rp-cup-icon,
-.experience .feature-grid > span:nth-child(4) svg.rp-cup-svg,
-.experience .feature-grid > span:nth-child(4) .rp-final-cup{
-  display:none !important;
-}
-
-.experience .feature-grid > span:nth-child(4) .rp-css-cup{
-  display:block !important;
-  position:relative !important;
-  width:30px !important;
-  height:18px !important;
-  margin:0 auto 14px !important;
-  border:4px solid #9b4029 !important;
-  border-top:4px solid #9b4029 !important;
-  border-radius:2px 2px 10px 10px !important;
-  box-sizing:border-box !important;
-  background:transparent !important;
-  opacity:1 !important;
-  filter:none !important;
-  transform:none !important;
-  font-size:0 !important;
+.experience .feature-grid .rp-feature-icon{
+  width:34px !important;
+  height:34px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  margin:0 auto 10px !important;
+  padding:0 !important;
   line-height:0 !important;
+  flex:0 0 34px !important;
 }
 
-/* alça */
-.experience .feature-grid > span:nth-child(4) .rp-css-cup::after{
-  content:"" !important;
+.experience .feature-grid .rp-feature-icon svg{
+  width:30px !important;
+  height:30px !important;
   display:block !important;
-  position:absolute !important;
-  width:10px !important;
-  height:11px !important;
-  right:-10px !important;
-  top:1px !important;
-  border:4px solid #9b4029 !important;
-  border-left:0 !important;
-  border-radius:0 8px 8px 0 !important;
-  box-sizing:border-box !important;
-  background:transparent !important;
+  overflow:visible !important;
+  fill:none !important;
+  stroke:#9b4029 !important;
+  stroke-width:2.4 !important;
+  stroke-linecap:round !important;
+  stroke-linejoin:round !important;
+  vector-effect:non-scaling-stroke !important;
 }
 
-/* pires */
-.experience .feature-grid > span:nth-child(4) .rp-css-cup::before{
-  content:"" !important;
+.experience .feature-grid > span{
+  font-weight:700 !important;
+}
+
+.experience .feature-grid > span small{
   display:block !important;
-  position:absolute !important;
-  width:38px !important;
-  height:4px !important;
-  left:-6px !important;
-  bottom:-10px !important;
-  background:#9b4029 !important;
-  border-radius:4px !important;
+  margin-top:4px !important;
+  font-weight:400 !important;
+}
+
+/* Neutraliza qualquer regra antiga específica para ícones ou quarto item */
+.experience .feature-grid > span:nth-child(4){
+  text-align:center !important;
 }
 </style>
 
@@ -609,9 +599,54 @@ footer a:active{
         <p class="eyebrow dark">Experiência Rafa Palma</p>
         <h2><span class="experience-title-line">Não servimos apenas café.</span><br><em>Criamos experiências.</em></h2>
         <p>Do primeiro aroma à última xícara, cada detalhe é pensado para acolher, aproximar pessoas e tornar o evento inesquecível.</p>
-        <div class="feature-grid">
-          <span><b>◔</b> Aroma<small>que acolhe</small></span><span><b>♡</b> Preparo<small>que encanta</small></span><span><b>◎</b> Conexão<small>que aproxima</small></span><span><i class="rp-css-cup" aria-hidden="true"></i>Momentos<small>que ficam</small></span>
-        </div>
+        
+<div class="feature-grid">
+  <span>
+    <span class="rp-feature-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="7"></circle>
+        <path d="M12 5v7h7"></path>
+      </svg>
+    </span>
+    Aroma
+    <small>que acolhe</small>
+  </span>
+
+  <span>
+    <span class="rp-feature-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24">
+        <path d="M20.8 4.6c-1.5-1.5-4-1.5-5.5 0L12 7.9 8.7 4.6a3.9 3.9 0 0 0-5.5 5.5L12 19l8.8-8.9a3.9 3.9 0 0 0 0-5.5z"></path>
+      </svg>
+    </span>
+    Preparo
+    <small>que encanta</small>
+  </span>
+
+  <span>
+    <span class="rp-feature-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="8"></circle>
+        <circle cx="12" cy="12" r="4"></circle>
+        <circle cx="12" cy="12" r="1"></circle>
+      </svg>
+    </span>
+    Conexão
+    <small>que aproxima</small>
+  </span>
+
+  <span>
+    <span class="rp-feature-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24">
+        <path d="M5 8h11v5a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4V8z"></path>
+        <path d="M16 10h2a2 2 0 0 1 0 4h-2"></path>
+        <path d="M4 20h14"></path>
+      </svg>
+    </span>
+    Momentos
+    <small>que ficam</small>
+  </span>
+</div>
+
       </div>
     </section>
 
