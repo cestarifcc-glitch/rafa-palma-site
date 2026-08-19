@@ -821,6 +821,48 @@ a, button, input, select, textarea, svg, path, circle{
 }
 </style>
 
+
+<style id="v54-coffee-benefits-mobile-fix">
+@media (max-width:560px){
+  /* V54 — corrige exclusivamente os 3 benefícios do café no mobile.
+     Na V53 eles ficaram em uma linha horizontal e causaram overflow. */
+
+  .coffee-benefits{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:10px !important;
+    width:100% !important;
+    max-width:100% !important;
+    margin-top:20px !important;
+    overflow:visible !important;
+  }
+
+  .coffee-benefits span{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    width:100% !important;
+    max-width:100% !important;
+    min-width:0 !important;
+    box-sizing:border-box !important;
+    white-space:normal !important;
+    text-align:center !important;
+    font-size:14px !important;
+    line-height:1.25 !important;
+    padding:11px 14px !important;
+    margin:0 !important;
+  }
+
+  .coffee-shop .btn,
+  .coffee-shop a.btn{
+    width:100% !important;
+    max-width:100% !important;
+    box-sizing:border-box !important;
+    margin-top:18px !important;
+  }
+}
+</style>
+
 </head>
 <body>
   <header class="site-header" id="inicio">
