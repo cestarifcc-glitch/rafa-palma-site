@@ -627,6 +627,16 @@ a, button, input, select, textarea, svg, path, circle{
 }
 </style>
 
+
+<style id="v64-budget-title-two-lines">
+.budget-intro h1 .title-line{display:block;white-space:nowrap;}
+@media (min-width:801px){
+  .budget-intro h1{font-size:46px !important;line-height:1.04 !important;letter-spacing:-1.5px !important;}
+}
+@media (max-width:800px){
+  .budget-intro h1{font-size:clamp(32px, 7.6vw, 40px) !important;line-height:1.04 !important;letter-spacing:-1.2px !important;}
+}
+</style>
 </head>
 <body>
   <header class="site-header">
@@ -640,7 +650,7 @@ a, button, input, select, textarea, svg, path, circle{
     <div class="container budget-shell">
       <section class="budget-intro">
         <p class="eyebrow dark">Orçamento Rafa Palma</p>
-        <h1>Conte-nos sobre a sua<br class="desktop-title-break">necessidade.</h1>
+        <h1><span class="title-line">Conte-nos sobre a sua</span><span class="title-line">necessidade.</span></h1>
         <p class="script">Quanto mais detalhes, mais ágil e precisa será a proposta.</p>
         <p>Preencha os dados e envie sua solicitação pelo WhatsApp.</p>
         <a class="back-link" href="index.html">← Voltar para o site</a>
