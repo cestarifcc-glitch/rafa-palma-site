@@ -12,6 +12,22 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+
+<style id="v26-retorno-mobile">
+.back-site-mobile{display:none;}
+@media(max-width:620px){
+  .back-site-full{display:none;}
+  .back-site-mobile{display:inline;}
+  .back-site{
+    display:inline-flex !important;
+    align-items:center;
+    justify-content:center;
+    white-space:nowrap;
+    font-size:12px !important;
+  }
+}
+</style>
+
 </head>
 <body>
   <header class="topbar">
@@ -19,7 +35,10 @@
       <img src="assets/logo-rafa-palma.svg" alt="Rafa Palma — Especialista em Café">
     </a>
     <div class="topbar-actions">
-      <a class="back-site" href="../">← Site Rafa Palma</a>
+      <a class="back-site" href="../" aria-label="Voltar ao site Rafa Palma">
+        <span class="back-site-full">← Site Rafa Palma</span>
+        <span class="back-site-mobile">← Site</span>
+      </a>
       <button class="cart-button" id="openCartBtn" type="button" aria-label="Abrir meu pedido">
         Meu pedido <span id="cartBadge" class="cart-badge">0</span>
       </button>
