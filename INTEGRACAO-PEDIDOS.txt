@@ -1,0 +1,12 @@
+INTEGRAÇÃO RAFA PALMA + PEDIDOS
+
+Site principal: raiz do projeto.
+Área de pedidos: /pedidos/
+
+Alterações realizadas:
+- Link 'Comprar Café' no menu principal.
+- Botão da seção 'Café Rafa Palma na sua casa' aponta para /pedidos/.
+- Página de pedidos V23 incorporada em /pedidos/.
+- Logo/retorno da página de pedidos volta para a raiz do site.
+
+Para publicar, envie/substitua o conteúdo desta pasta no projeto atual.

@@ -1006,7 +1006,7 @@ html{scroll-behavior:smooth;}
     margin-top:12px !important;
   }
 
-  /* Café: o afeto ao redor da mesa — remove círculo decorativo */
+  /* Café: afeto ao redor da mesa — remove círculo decorativo */
   .affection .dot,
   .affection .circle,
   .affection .event-dot,
@@ -1027,6 +1027,36 @@ html{scroll-behavior:smooth;}
 }
 </style>
 
+
+<style id="v-integracao-pedidos">
+.main-nav .nav-buy,
+.main-nav .nav-buy:link,
+.main-nav .nav-buy:visited,
+.main-nav .nav-buy:hover,
+.main-nav .nav-buy:active,
+.main-nav .nav-buy:focus{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px 15px;
+  border-radius:5px;
+  background:#c99337 !important;
+  color:#17110b !important;
+  -webkit-text-fill-color:#17110b !important;
+  font-weight:800;
+  white-space:nowrap;
+}
+.main-nav .nav-buy:hover{
+  filter:brightness(1.06);
+}
+@media(max-width:900px){
+  .main-nav .nav-buy{
+    width:100%;
+    min-height:44px;
+  }
+}
+</style>
+
 </head>
 <body id="inicio">
   <header class="site-header" id="inicio">
@@ -1036,6 +1066,7 @@ html{scroll-behavior:smooth;}
     <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
     <nav class="main-nav" aria-label="Navegação principal">
       <a href="#eventos">Eventos</a><a href="#experiencias">Experiências</a><a href="#sobre">Sobre</a><a href="#cafes">Cafés</a><a href="#empresas">Empresas</a><a href="#contato">Contato</a>
+      <a class="nav-buy" href="pedidos/">Comprar Café</a>
       <a class="nav-cta" href="orcamento.html">Orçamento</a>
     </nav>
   </header>
@@ -1167,7 +1198,7 @@ html{scroll-behavior:smooth;}
     <section class="coffee-shop section-cream" id="cafes">
       <div class="container coffee-grid">
         <div class="coffee-photo"><img src="assets/images/cafe-rafa-palmas.jpg" alt="Embalagens de Café Rafa Palma" loading="lazy"></div>
-        <div class="coffee-copy"><p class="eyebrow dark">Café Rafa Palma na sua casa</p><h2>Da nossa torrefação para todo o Brasil.</h2><p class="script">O café da experiência Rafa Palma, também na sua xícara.</p><p>Cafés especiais selecionados e torrados por Rafa Palma em nossa própria torrefação. Escolha em grãos ou moído e receba em qualquer lugar do Brasil — para apreciar em casa ou transformar em presente.</p><div class="coffee-benefits"><span>Torra própria</span><span>Em grãos ou moído</span><span>Envio para todo o Brasil</span></div><a class="btn btn-primary" target="_blank" rel="noopener" href="https://wa.me/5555991128100?text=Ol%C3%A1%21%20Conheci%20os%20caf%C3%A9s%20Rafa%20Palma%20pelo%20site%20e%20gostaria%20de%20comprar%20Caf%C3%A9%20Rafa%20Palma.%20Pode%20me%20passar%20as%20op%C3%A7%C3%B5es%20dispon%C3%ADveis%3F">Quero comprar Café Rafa Palma</a></div>
+        <div class="coffee-copy"><p class="eyebrow dark">Café Rafa Palma na sua casa</p><h2>Da nossa torrefação para todo o Brasil.</h2><p class="script">O café da experiência Rafa Palma, também na sua xícara.</p><p>Cafés especiais selecionados e torrados por Rafa Palma em nossa própria torrefação. Escolha em grãos ou moído e receba em qualquer lugar do Brasil — para apreciar em casa ou transformar em presente.</p><div class="coffee-benefits"><span>Torra própria</span><span>Em grãos ou moído</span><span>Envio para todo o Brasil</span></div><a class="btn btn-primary" href="pedidos/">Comprar Café Rafa Palma</a></div>
       </div>
     </section>
 
@@ -1185,7 +1216,7 @@ html{scroll-behavior:smooth;}
 
     <section class="affection split">
       <div class="media"><img src="assets/images/familia.jpg" alt="Família Rafa Palma" loading="lazy"></div>
-      <div class="copy panel-light"><p class="eyebrow dark">Essência da marca</p><h2>Café: <em>o afeto ao redor da mesa.</em></h2><p><strong>Antes de ser produto, o café é encontro.</strong> É conversa, acolhimento, família e memória.</p><p>Foi ao redor da mesa que muitas histórias começaram — e é essa essência que Rafa Palma leva para cada xícara, cada evento e cada experiência.</p></div>
+      <div class="copy panel-light"><p class="eyebrow dark">Essência da marca</p><h2>Café: <em>afeto ao redor da mesa.</em></h2><p><strong>Antes de ser produto, o café é encontro.</strong> É conversa, acolhimento, família e memória.</p><p>Foi ao redor da mesa que muitas histórias começaram — e é essa essência que Rafa Palma leva para cada xícara, cada evento e cada experiência.</p></div>
     </section>
 
     <section class="final-cta" id="contato"><div class="final-bg"></div><div class="container final-content"><p class="eyebrow">Seu próximo evento</p><h2>Pode ter essa experiência.</h2><p>Leve a experiência Rafa Palma para sua empresa, feira, exposição, camarote ou evento especial.</p><p class="national-service">Atendimento em todo o Brasil.</p><a class="btn btn-primary btn-large" target="_blank" rel="noopener" href="https://wa.me/5555991128100?text=Ol%C3%A1%21%20Vim%20pelo%20site%20do%20Rafa%20Palma%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento.">Solicitar orçamento pelo WhatsApp</a></div></section>
