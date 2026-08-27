@@ -1,8 +1,17 @@
 document.addEventListener('DOMContentLoaded',()=>{
   const menuToggle=document.querySelector('.menu-toggle');
-  const nav=document.querySelector('.nav');
-  menuToggle?.addEventListener('click',()=>nav?.classList.toggle('open'));
-  document.querySelectorAll('.nav a').forEach(a=>a.addEventListener('click',()=>nav?.classList.remove('open')));
+  const nav=document.querySelector('.main-nav');
+  menuToggle?.addEventListener('click',()=>{
+    if(!nav) return;
+    const isOpen=nav.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    menuToggle.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
+  });
+  document.querySelectorAll('.main-nav a').forEach(a=>a.addEventListener('click',()=>{
+    nav?.classList.remove('open');
+    menuToggle?.setAttribute('aria-expanded','false');
+    menuToggle?.setAttribute('aria-label','Abrir menu');
+  }));
 
   const modal=document.querySelector('.video-modal');
   const modalVideo=modal?.querySelector('video');
@@ -29,6 +38,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     if(!modal||!modalVideo)return;
     modalVideo.src=button.dataset.video;
     modalVideo.muted=button.dataset.muted==='true';
+    if(button.dataset.muted==='true'){ modalVideo.volume=0; modalVideo.defaultMuted=true; } else { modalVideo.volume=1; modalVideo.defaultMuted=false; }
     modal.classList.add('open');
     modal.setAttribute('aria-hidden','false');
     document.body.style.overflow='hidden';

@@ -1,0 +1,8 @@
+FONTES OFICIAIS RAFA PALMA
+
+Coloque nesta pasta /fonts os arquivos:
+- Freehouse-Regular.ttf
+- Chandler42 Regular.otf
+- BAHNSCHRIFT.TTF
+
+O código desta versão já aponta para /fonts/.

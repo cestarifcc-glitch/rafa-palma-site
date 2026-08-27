@@ -1069,3 +1069,62 @@ section.how-section .steps h3{
 .product-card.pending-add{box-shadow:0 0 0 2px rgba(180,120,35,.55)}
 .product-card.pending-add .add-btn{animation:pendingPulse 1.4s ease-in-out infinite}
 @keyframes pendingPulse{50%{transform:scale(1.025)}}
+
+/* V24 — Tipografia oficial Rafa Palma no site de pedidos */
+@font-face{
+  font-family:"Rafa Freehouse";
+  src:url("/assets/fonts/Freehouse-Regular.ttf") format("truetype");
+  font-style:normal;
+  font-weight:400;
+  font-display:swap;
+}
+@font-face{
+  font-family:"Rafa Chandler42";
+  src:url("/assets/fonts/Chandler42 Regular.otf") format("opentype");
+  font-style:normal;
+  font-weight:400;
+  font-display:swap;
+}
+@font-face{
+  font-family:"Rafa Bahnschrift";
+  src:url("/assets/fonts/BAHNSCHRIFT.TTF") format("truetype");
+  font-style:normal;
+  font-weight:100 900;
+  font-display:swap;
+}
+
+body,
+button,input,select,textarea,
+.topbar,.btn,.eyebrow,.product-desc,.control-label,
+.cart-meta,.field,.footer{
+  font-family:"Rafa Bahnschrift",Bahnschrift,"Arial Narrow",Arial,sans-serif !important;
+}
+
+.hero h1,
+.section-heading h2,
+.cart-header h2,
+.checkout-top h2,
+.product-title-row h3,
+.steps h3,
+.cart-item h4,
+.cart-empty strong,
+.delivery-choice legend,
+.hero-panel strong,
+.product-placeholder,
+.brand-mark,
+.product-image::after,
+.product-media::after{
+  font-family:"Rafa Freehouse",Georgia,serif !important;
+  font-weight:400 !important;
+}
+
+.hero-note,
+.hero-script{
+  font-family:"Rafa Chandler42",Georgia,serif !important;
+  font-style:normal !important;
+  font-weight:400 !important;
+}
+
+.product-placeholder small{
+  font-family:"Rafa Bahnschrift",Bahnschrift,"Arial Narrow",Arial,sans-serif !important;
+}

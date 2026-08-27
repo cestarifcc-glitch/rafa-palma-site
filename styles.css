@@ -632,3 +632,50 @@ img,video,svg,iframe{max-width:100%;}
 }
 
 .video-close{z-index:102;width:52px;height:52px;border-radius:50%;background:rgba(0,0,0,.72)!important;border:1px solid rgba(255,255,255,.7)!important;display:flex;align-items:center;justify-content:center;line-height:1}.video-modal video{border-radius:10px}@media(max-width:900px){.video-close{position:fixed;right:14px;top:14px;font-size:36px;width:48px;height:48px;background:#111!important}.video-modal{padding:70px 12px 18px!important}}
+
+/* V5 — Tipografia oficial Rafa Palma
+   Título: Freehouse | Apoio: Chandler42 | Texto: Bahnschrift */
+@font-face{
+  font-family:"Rafa Freehouse";
+  src:url("/assets/fonts/Freehouse-Regular.ttf") format("truetype");
+  font-style:normal;
+  font-weight:400;
+  font-display:swap;
+}
+@font-face{
+  font-family:"Rafa Chandler42";
+  src:url("/assets/fonts/Chandler42 Regular.otf") format("opentype");
+  font-style:normal;
+  font-weight:400;
+  font-display:swap;
+}
+@font-face{
+  font-family:"Rafa Bahnschrift";
+  src:url("/assets/fonts/BAHNSCHRIFT.TTF") format("truetype");
+  font-style:normal;
+  font-weight:100 900;
+  font-display:swap;
+}
+
+body,
+button,input,select,textarea,
+.main-nav,.btn,.eyebrow,.routes,
+.footer-grid{
+  font-family:"Rafa Bahnschrift",Bahnschrift,"Arial Narrow",Arial,sans-serif;
+}
+
+h1,h2,h3,
+.event-card h3,
+.company-grid h3,
+.final-content h2{
+  font-family:"Rafa Freehouse",Georgia,serif;
+  font-weight:400;
+}
+
+.script,
+h2 em,
+.about blockquote{
+  font-family:"Rafa Chandler42",Georgia,serif;
+  font-style:normal;
+  font-weight:400;
+}
