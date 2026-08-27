@@ -1,0 +1,2 @@
+Para que a tipografia oficial apareça também no Vercel, confirme que estes arquivos já existentes no seu projeto estejam em assets/fonts/: Freehouse-Regular.ttf, Chandler42 Regular.otf e BAHNSCHRIFT.TTF.
+A V12 não altera nem redistribui os arquivos das fontes.

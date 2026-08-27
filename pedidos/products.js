@@ -19,8 +19,8 @@ window.RAFA_PALMA_PRODUCTS = [
     sizes: [
       { grams: 100, price: 25.00 },
       { grams: 250, price: 55.00 },
-      { grams: 500, price: 105.00 },
-      { grams: 1000, price: 210.00 }
+      { grams: 500, price: 105.00, disabled: true },
+      { grams: 1000, price: 210.00, disabled: true }
     ],
     beans: true,
     ground: true,
@@ -44,8 +44,8 @@ window.RAFA_PALMA_PRODUCTS = [
     sizes: [
       { grams: 100, price: 25.00 },
       { grams: 250, price: 55.00 },
-      { grams: 500, price: 105.00 },
-      { grams: 1000, price: 210.00 }
+      { grams: 500, price: 105.00, disabled: true },
+      { grams: 1000, price: 210.00, disabled: true }
     ],
     beans: true,
     ground: true,
@@ -69,8 +69,8 @@ window.RAFA_PALMA_PRODUCTS = [
     sizes: [
       { grams: 100, price: 34.00 },
       { grams: 250, price: 85.00 },
-      { grams: 500, price: 150.00 },
-      { grams: 1000, price: 300.00 }
+      { grams: 500, price: 150.00, disabled: true },
+      { grams: 1000, price: 300.00, disabled: true }
     ],
     beans: true,
     ground: true,

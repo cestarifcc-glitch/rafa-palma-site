@@ -703,14 +703,14 @@ h2 em,
 }
 
 /* V10 — quebras fixas e escala refinada */
-.hero-title-v10{font-family:"Freehouse",serif;font-size:clamp(42px,4.15vw,60px);line-height:.98;max-width:760px}
+.hero-title-v10{font-family:"Rafa Freehouse",Georgia,serif;font-size:clamp(42px,4.15vw,60px);line-height:.98;max-width:760px}
 .hero-title-v10>span{display:block;color:var(--paper)}
-.experience-title-v10{font-family:"Freehouse",serif;font-size:clamp(31px,3vw,43px);line-height:1.03}
+.experience-title-v10{font-family:"Rafa Freehouse",Georgia,serif;font-size:clamp(31px,3vw,43px);line-height:1.03}
 .experience-title-v10>span{display:block}
-.experience-title-v10 em{display:block;margin-top:7px;font-family:"Chandler42",serif}
-.brazil-title-v10{font-family:"Freehouse",serif;font-size:clamp(27px,2.65vw,38px);line-height:1.08;max-width:570px}
+.experience-title-v10 em{display:block;margin-top:7px;font-family:"Rafa Chandler42",Georgia,serif}
+.brazil-title-v10{font-family:"Rafa Freehouse",Georgia,serif;font-size:clamp(27px,2.65vw,38px);line-height:1.08;max-width:570px}
 .brazil-title-v10>span{display:block}
-.workshops-title-v10{font-family:"Freehouse",serif;font-size:clamp(28px,2.7vw,39px);line-height:1.08;max-width:560px}
+.workshops-title-v10{font-family:"Rafa Freehouse",Georgia,serif;font-size:clamp(28px,2.7vw,39px);line-height:1.08;max-width:560px}
 .workshops-title-v10>span{display:block}
 @media(max-width:768px){.hero-title-v10{font-size:clamp(37px,10vw,50px);line-height:.98}.experience-title-v10{font-size:clamp(29px,8vw,37px)}.brazil-title-v10,.workshops-title-v10{font-size:clamp(28px,7.8vw,36px)}}
 
@@ -878,5 +878,43 @@ h2 em,
   }
   .final-content h2{
     font-size:34px !important;
+  }
+}
+
+
+/* V12 — tipografia oficial: reforço para desktop */
+@media (min-width:769px){
+  h1,h2,
+  .hero-title-v10,
+  .experience-title-v10,
+  .brazil-title-v10,
+  .workshops-title-v10,
+  .coffee-title-v9,
+  .section-head h2,
+  .event-card h3,
+  .roast-copy h2,
+  .about h2,
+  .company-grid h3,
+  .final-content h2{
+    font-family:"Rafa Freehouse",Georgia,serif !important;
+    font-weight:400 !important;
+  }
+
+  .script,
+  .experience-title-v10 em,
+  h2 em,
+  .about blockquote,
+  .roast-lead{
+    font-family:"Rafa Chandler42",Georgia,serif !important;
+    font-style:normal !important;
+    font-weight:400 !important;
+  }
+
+  body,p,
+  button,input,select,textarea,
+  .main-nav,.btn,.eyebrow,.routes,
+  .footer-grid,.event-card span,
+  .event-card p,.company-grid p{
+    font-family:"Rafa Bahnschrift",Bahnschrift,"Arial Narrow",Arial,sans-serif !important;
   }
 }

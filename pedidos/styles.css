@@ -1128,3 +1128,36 @@ button,input,select,textarea,
 .product-placeholder small{
   font-family:"Rafa Bahnschrift",Bahnschrift,"Arial Narrow",Arial,sans-serif !important;
 }
+
+
+/* V12 — ajustes temporários de embalagens e título Procedência */
+.size-btn.unavailable,
+.size-btn:disabled{
+  opacity:.38 !important;
+  cursor:not-allowed !important;
+  background:#eee7df !important;
+  color:#776e65 !important;
+  border-color:#d8cec4 !important;
+  text-decoration:line-through;
+  box-shadow:none !important;
+}
+
+@media (max-width:700px){
+  .product-card[data-product-id="procedencia"] .product-title-row h3{
+    font-size:clamp(1.35rem,7.2vw,1.72rem) !important;
+    line-height:1.02 !important;
+    letter-spacing:0 !important;
+    overflow-wrap:anywhere;
+    max-width:100%;
+  }
+
+  .product-title-row{
+    gap:8px !important;
+  }
+  .product-title-row h3{
+    min-width:0;
+  }
+  .product-price{
+    flex:0 0 auto;
+  }
+}
