@@ -3,6 +3,8 @@ const METHODS = window.RAFA_PALMA_METHODS || [];
 const WHATSAPP_NUMBER = '5555991128100';
 
 const state = { cart: [], checkoutStep: 1, orderId: null };
+function markPending(card){ card.dataset.pending='true'; card.classList.add('pending-add'); }
+function clearPending(card){ card.dataset.pending='false'; card.classList.remove('pending-add'); }
 const money = v => new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL'}).format(v);
 const byId = id => document.getElementById(id);
 
@@ -63,15 +65,15 @@ function renderProducts(){
     });
     card.querySelectorAll('.size-btn').forEach(btn=>btn.addEventListener('click',()=>{
       card.querySelectorAll('.size-btn').forEach(b=>b.classList.remove('active')); btn.classList.add('active');
-      card.dataset.selectedGrams=btn.dataset.grams; card.dataset.selectedPrice=btn.dataset.price;
+      card.dataset.selectedGrams=btn.dataset.grams; card.dataset.selectedPrice=btn.dataset.price; markPending(card);
       card.querySelector('[data-price-display]').textContent=money(Number(btn.dataset.price));
     }));
     card.querySelectorAll('.type-btn').forEach(btn=>btn.addEventListener('click',()=>{
       card.querySelectorAll('.type-btn').forEach(b=>b.classList.remove('active')); btn.classList.add('active');
-      card.dataset.selectedType=btn.dataset.type;
+      card.dataset.selectedType=btn.dataset.type; markPending(card);
       const wrap=card.querySelector('.method-wrap'); if(wrap) wrap.classList.toggle('hidden',btn.dataset.type!=='moido');
     }));
-    const method=card.querySelector('.method-select'); if(method) method.addEventListener('change',()=>{ 
+    const method=card.querySelector('.method-select'); if(method) method.addEventListener('change',()=>{ markPending(card); 
       method.classList.remove('needs-attention');
       const needsGuidance=method.value==='Não sei qual escolher';
       card.querySelector('.helper').classList.toggle('hidden',!needsGuidance);
@@ -81,7 +83,8 @@ function renderProducts(){
         if(guidance) guidance.value='';
       }
     });
-    card.querySelector('.guidance-input')?.addEventListener('input',e=>e.target.classList.remove('needs-attention'));
+    card.querySelector('.guidance-input')?.addEventListener('input',e=>{e.target.classList.remove('needs-attention');markPending(card)});
+    card.querySelector('.qty-select')?.addEventListener('change',()=>markPending(card));
     card.querySelector('.add-btn').addEventListener('click',()=>addFromCard(card));
   });
 }
@@ -110,6 +113,7 @@ function addFromCard(card){
   const existing=state.cart.find(i=>i.key===key);
   if(existing) existing.qty+=qty; else state.cart.push({key,productId:product.id,name:product.name,grams:Number(card.dataset.selectedGrams),price:Number(card.dataset.selectedPrice),type,method,guidance,qty});
   renderCart();
+  clearPending(card);
   const addBtn=card.querySelector('.add-btn');
   const originalText='Adicionar';
   addBtn.textContent=`✓ ${qty} ${qty===1?'adicionado':'adicionados'}`;
@@ -146,7 +150,8 @@ function renderCart(){
 
 function openCart(){byId('cartDrawer').classList.add('open');byId('cartDrawer').setAttribute('aria-hidden','false');byId('overlay').hidden=false}
 function closeCart(){byId('cartDrawer').classList.remove('open');byId('cartDrawer').setAttribute('aria-hidden','true');byId('overlay').hidden=true}
-function openCheckout(){if(!state.cart.length)return;ensureOrderId();closeCart();byId('checkoutModal').classList.add('open');byId('checkoutModal').setAttribute('aria-hidden','false');goStep(1)}
+function getPendingCard(){return [...document.querySelectorAll('.product-card')].find(card=>card.dataset.pending==='true');}
+function openCheckout(){if(!state.cart.length)return;const pending=getPendingCard();if(pending){pending.scrollIntoView({behavior:'smooth',block:'center'});setTimeout(()=>alert('Você configurou este café, mas ainda não adicionou ao pedido. Toque em “Adicionar” para incluí-lo ou desfaça a configuração antes de finalizar.'),250);closeCart();return;}ensureOrderId();closeCart();byId('checkoutModal').classList.add('open');byId('checkoutModal').setAttribute('aria-hidden','false');goStep(1)}
 function closeCheckout(){byId('checkoutModal').classList.remove('open');byId('checkoutModal').setAttribute('aria-hidden','true')}
 function goStep(step){state.checkoutStep=step;document.querySelectorAll('.checkout-step').forEach(x=>x.classList.toggle('active',Number(x.dataset.step)===step));document.querySelectorAll('[data-step-dot]').forEach(x=>x.classList.toggle('active',Number(x.dataset.stepDot)<=step));byId('checkoutTitle').textContent=step===1?'Seus dados':step===2?'Entrega':'Resumo do seu pedido';if(step===3){saveRememberedCustomerData();renderReview()}}
 
@@ -316,6 +321,13 @@ function validateStep(step){
     if(!valid) ok=false;
   });
 
+  if(step===2 && form.delivery.value==='retirada'){
+    const input=form.pickupDate;
+    const valid=Boolean(input.value) && input.value >= new Date().toISOString().slice(0,10);
+    input.closest('.field')?.classList.toggle('invalid',!valid);
+    if(!valid) ok=false;
+  }
+
   if(step===2 && form.delivery.value==='envio'){
     ['cep','street','number','district','city','state'].forEach(name=>{
       const input=form.elements[name];
@@ -338,7 +350,7 @@ function renderReview(){
   const form=byId('checkoutForm'); const total=state.cart.reduce((s,i)=>s+i.price*i.qty,0);
   let html=`<div class="review-line"><div><strong>${form.name.value}</strong><small>${form.phone.value} · ${form.email.value}</small></div></div>`;
   html+=state.cart.map(i=>`<div class="review-line"><div><strong>${i.qty} × ${i.name} ${i.grams} g</strong><small>${i.type==='graos'?'Em grãos':`Moído · ${methodOrderLabel(i.method)}${i.guidance?`<br>Como prepara: ${i.guidance}`:''}`}</small></div><strong>${money(i.qty*i.price)}</strong></div>`).join('');
-  const delivery=form.delivery.value==='retirada'?'Retirada':`${form.street.value}, ${form.number.value} · ${form.district.value} · ${form.city.value}/${form.state.value.toUpperCase()}`;
+  const delivery=form.delivery.value==='retirada'?`Retirada · ${form.pickupDate.value.split('-').reverse().join('/')}`:`${form.street.value}, ${form.number.value} · ${form.district.value} · ${form.city.value}/${form.state.value.toUpperCase()}`;
   html+=`<div class="review-line"><div><strong>Entrega</strong><small>${delivery}</small></div></div><div class="review-line review-total"><span>Total dos produtos</span><strong>${money(total)}</strong></div><p class="freight-note">Entrega: frete calculado após o envio do pedido antes do pagamento.</p>`;
   html=`<div class="order-id-card"><span>NÚMERO DO PEDIDO</span><strong>#${ensureOrderId()}</strong></div>`+html;
   byId('orderReview').innerHTML=html;
@@ -407,7 +419,7 @@ function buildWhatsAppMessage(){
   );
 
   if(isPickup){
-    lines.push('Tipo de entrega: Retirada');
+    lines.push('Tipo de entrega: Retirada', `Data da retirada: ${f.pickupDate.value.split('-').reverse().join('/')}`);
   } else {
     lines.push(
       'Tipo de entrega: Envio',
@@ -436,7 +448,8 @@ function buildWhatsAppMessage(){
 byId('openCartBtn').addEventListener('click',openCart);
 byId('quickCart')?.addEventListener('click',openCart);byId('closeCartBtn').addEventListener('click',closeCart);byId('overlay').addEventListener('click',closeCart);byId('continueShoppingBtn').addEventListener('click',closeCart);byId('continueShoppingEmpty').addEventListener('click',closeCart);byId('checkoutBtn').addEventListener('click',openCheckout);byId('closeCheckoutBtn').addEventListener('click',closeCheckout);
 document.querySelectorAll('[data-next]').forEach(btn=>btn.addEventListener('click',()=>{const next=Number(btn.dataset.next);if(validateStep(next-1))goStep(next)}));document.querySelectorAll('[data-back]').forEach(btn=>btn.addEventListener('click',()=>goStep(Number(btn.dataset.back))));
-byId('checkoutForm').addEventListener('change',e=>{if(e.target.name==='delivery')byId('addressFields').classList.toggle('hidden',e.target.value!=='envio')});
+byId('checkoutForm').addEventListener('change',e=>{if(e.target.name==='delivery'){const pickup=e.target.value==='retirada';byId('addressFields').classList.toggle('hidden',pickup);byId('pickupFields').classList.toggle('hidden',!pickup);byId('checkoutForm').pickupDate.required=pickup;}});
 byId('checkoutForm').addEventListener('submit',e=>{e.preventDefault();if(!validateStep(1)||!validateStep(2))return;const msg=encodeURIComponent(buildWhatsAppMessage());window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`,'_blank','noopener,noreferrer')});
 
+const pickupDate=byId('checkoutForm').pickupDate; if(pickupDate){const today=new Date().toISOString().slice(0,10);pickupDate.min=today;if(!pickupDate.value)pickupDate.value=today;}
 setupFormUX();renderProducts();renderCart();

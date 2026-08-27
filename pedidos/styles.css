@@ -1066,3 +1066,6 @@ section.how-section .steps h3{
     gap:4px;
   }
 }
+.product-card.pending-add{box-shadow:0 0 0 2px rgba(180,120,35,.55)}
+.product-card.pending-add .add-btn{animation:pendingPulse 1.4s ease-in-out infinite}
+@keyframes pendingPulse{50%{transform:scale(1.025)}}

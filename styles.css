@@ -630,3 +630,5 @@ img,video,svg,iframe{max-width:100%;}
     margin-top:14px;
   }
 }
+
+.video-close{z-index:102;width:52px;height:52px;border-radius:50%;background:rgba(0,0,0,.72)!important;border:1px solid rgba(255,255,255,.7)!important;display:flex;align-items:center;justify-content:center;line-height:1}.video-modal video{border-radius:10px}@media(max-width:900px){.video-close{position:fixed;right:14px;top:14px;font-size:36px;width:48px;height:48px;background:#111!important}.video-modal{padding:70px 12px 18px!important}}

@@ -154,6 +154,9 @@
             <label class="choice-card"><input type="radio" name="delivery" value="retirada" checked /><span><strong>Retirar</strong><small>Retirada conforme orientação da Rafa Palma.</small></span></label>
             <label class="choice-card"><input type="radio" name="delivery" value="envio" /><span><strong>Receber</strong><small>Informe seu endereço para envio.</small></span></label>
           </fieldset>
+          <div id="pickupFields" class="field-grid">
+            <label class="field field-wide">Data da retirada<input name="pickupDate" type="date" required /><small class="field-hint">Pode ser hoje ou uma data futura.</small></label>
+          </div>
           <div id="addressFields" class="field-grid hidden">
             <label class="field">CEP<input name="cep" inputmode="numeric" autocomplete="postal-code" maxlength="9" placeholder="00000-000" /><small id="cepStatus" class="field-hint">Ao informar o CEP, buscamos o endereço automaticamente.</small></label>
             <label class="field field-wide">Logradouro (rua, avenida etc.)<input name="street" autocomplete="address-line1" /></label>
