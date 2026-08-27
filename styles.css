@@ -679,3 +679,25 @@ h2 em,
   font-style:normal;
   font-weight:400;
 }
+
+/* V9 — ajustes tipográficos consolidados */
+.hero-title-v9{font-size:clamp(50px,5.35vw,76px);line-height:.94;max-width:720px}
+.hero-title-v9>span{display:block;color:var(--paper)}
+.experience-title-v9{font-size:clamp(32px,3.35vw,48px);line-height:1.02}
+.experience-title-v9>span{display:block}
+.experience-title-v9 em{display:block;margin-top:5px}
+.brazil-title-v9{font-size:clamp(31px,3.15vw,45px);line-height:1.08;max-width:560px}
+.brazil-title-v9>span{display:block}
+.workshops-title-v9{font-size:clamp(31px,3.1vw,44px);line-height:1.08;max-width:540px}
+.coffee-title-v9{font-size:clamp(32px,3.2vw,46px);line-height:1.08;max-width:570px}
+.coffee-title-v9>span{display:block}
+@media(max-width:768px){
+.hero-title-v9{font-size:clamp(42px,12vw,58px);line-height:.94}
+.experience-title-v9{font-size:clamp(27px,8vw,36px)}
+.brazil-title-v9,.workshops-title-v9,.coffee-title-v9{font-size:clamp(30px,8.7vw,40px);line-height:1.06}
+}
+@media(max-width:560px){
+.experience .copy .experience-title-v9{display:block!important;line-height:1.02!important;margin-bottom:22px!important}
+.experience .copy .experience-title-v9>span{display:block!important;white-space:normal!important;font-size:inherit!important;line-height:1.02!important;margin:0!important}
+.experience .copy .experience-title-v9 em{display:block!important;margin-top:5px!important;line-height:1.02!important}
+}
