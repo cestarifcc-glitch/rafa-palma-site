@@ -1161,3 +1161,67 @@ button,input,select,textarea,
     flex:0 0 auto;
   }
 }
+
+
+/* V13 — correção definitiva do card Procedência no mobile */
+@media (max-width:700px){
+
+  /* Nome dentro da embalagem ilustrativa */
+  .product-card[data-product-id="procedencia"] .product-placeholder{
+    width:54% !important;
+    max-width:210px !important;
+    padding:12px 8px !important;
+    font-size:clamp(.92rem,4.2vw,1.12rem) !important;
+    line-height:1 !important;
+    letter-spacing:-.02em !important;
+    white-space:nowrap !important;
+    overflow:hidden !important;
+    text-overflow:clip !important;
+    box-sizing:border-box !important;
+  }
+
+  .product-card[data-product-id="procedencia"] .product-placeholder small{
+    font-size:.52rem !important;
+    letter-spacing:.12em !important;
+  }
+
+  /* Título e preço abaixo da embalagem */
+  .product-card[data-product-id="procedencia"] .product-title-row{
+    display:grid !important;
+    grid-template-columns:minmax(0,1fr) auto !important;
+    align-items:start !important;
+    column-gap:10px !important;
+  }
+
+  .product-card[data-product-id="procedencia"] .product-title-row h3{
+    font-size:clamp(1.08rem,5.2vw,1.32rem) !important;
+    line-height:1.02 !important;
+    letter-spacing:-.01em !important;
+    max-width:100% !important;
+    min-width:0 !important;
+    overflow:hidden !important;
+    white-space:nowrap !important;
+  }
+
+  .product-card[data-product-id="procedencia"] .product-price{
+    font-size:.94rem !important;
+    line-height:1.1 !important;
+    white-space:nowrap !important;
+    padding-top:2px !important;
+  }
+}
+
+/* Telefones mais estreitos */
+@media (max-width:390px){
+  .product-card[data-product-id="procedencia"] .product-placeholder{
+    font-size:.88rem !important;
+    padding-left:6px !important;
+    padding-right:6px !important;
+  }
+  .product-card[data-product-id="procedencia"] .product-title-row h3{
+    font-size:1.05rem !important;
+  }
+  .product-card[data-product-id="procedencia"] .product-price{
+    font-size:.88rem !important;
+  }
+}
