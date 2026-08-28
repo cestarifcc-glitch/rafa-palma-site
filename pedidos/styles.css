@@ -1292,3 +1292,41 @@ button,input,select,textarea,
     font-size:.95rem !important;
   }
 }
+
+
+/* V16 — correção apenas do card Procedência no desktop */
+@media (min-width:701px){
+
+  .product-card[data-product-id="procedencia"] .product-placeholder{
+    font-size:clamp(.88rem,1.18vw,1.04rem) !important;
+    line-height:1 !important;
+    letter-spacing:-.035em !important;
+    white-space:nowrap !important;
+    padding-left:8px !important;
+    padding-right:8px !important;
+    overflow:hidden !important;
+    box-sizing:border-box !important;
+  }
+
+  .product-card[data-product-id="procedencia"] .product-title-row{
+    display:flex !important;
+    align-items:flex-start !important;
+    justify-content:space-between !important;
+    gap:8px !important;
+  }
+
+  .product-card[data-product-id="procedencia"] .product-title-row h3{
+    font-size:clamp(.92rem,1.35vw,1.12rem) !important;
+    line-height:1.02 !important;
+    letter-spacing:-.03em !important;
+    white-space:nowrap !important;
+    min-width:0 !important;
+  }
+
+  .product-card[data-product-id="procedencia"] .product-price{
+    flex:0 0 auto !important;
+    white-space:nowrap !important;
+    font-size:.86rem !important;
+    padding-top:2px !important;
+  }
+}
