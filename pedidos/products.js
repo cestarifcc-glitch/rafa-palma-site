@@ -76,6 +76,32 @@ window.RAFA_PALMA_PRODUCTS = [
     ground: true,
     image: ''
   }
+  ,
+  {
+    id: 'dois-caminhos',
+    name: 'Dois Caminhos',
+    description: 'Café Rafa Palma · torra própria.',
+    tasting: 'Chocolate · Amêndoas · Caramelo',
+    score: '84 pontos',
+    details: {
+      variety: 'Catuaí 99',
+      process: 'Natural',
+      origin: 'Fazenda Aleluia — Mogiana — Franca/SP',
+      producer: 'Augusto Rodrigo Alves',
+      sensory: 'Chocolate, amêndoas e caramelo.',
+      roast: 'Média clara',
+      species: '100% Arábica'
+    },
+    sizes: [
+      { grams: 100, price: 20.00 },
+      { grams: 250, price: 50.00 },
+      { grams: 500, price: 100.00, disabled: true },
+      { grams: 1000, price: 200.00, disabled: true }
+    ],
+    beans: true,
+    ground: true,
+    image: ''
+  }
 ];
 
 window.RAFA_PALMA_METHODS = [
